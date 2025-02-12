@@ -14,10 +14,11 @@ function CardList () {
 function PhotoList ({ photos }) {
     return photos.map((photo) => {
         return (
-            <div className='card'>
+            <div className='card'key={photo.id}>
                 <img src={photo.photo} alt={photo.photographer}  />
                 <h4 className='card__title'>{photo.photographer}</h4>
                 {photo.tags.map((tag) => {
+                    // <li>key={tag}</li>
                     return <div>{tag}</div>;
                 })}
             </div>

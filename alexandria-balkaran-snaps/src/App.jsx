@@ -4,6 +4,7 @@ import CardList from './components/CardList/CardList'
 import Hero from './components/Hero/Hero'
 // import { useState } from 'react'
 import './App.scss'
+import Footer from './components/Footer/Footer'
 
 function App() {
   
@@ -16,6 +17,8 @@ function App() {
       <section>
         <CardList></CardList>
       </section>
+
+      <Footer/>
       
     </>
   )
