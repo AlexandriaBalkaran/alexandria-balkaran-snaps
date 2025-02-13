@@ -1,16 +1,18 @@
+import "./Footer.scss";
+
 const Footer = () => {
     return (
       <footer className="footer__container">
-            <h1>Snaps</h1>
-            <div>
-                <a className='footer__link' href="">For photographers</a>
-                <a href="">Hire talent</a>
-                <a href="">Inspiration</a>
+            <h1 className="footer__title">Snaps</h1>
+            <div className="footer__link--space">
+                <a className="footer__link--underline" href="">For photographers</a>
+                <a className="footer__link--underline" href="">Hire talent</a>
+                <a className="footer__link--underline" href="">Inspiration</a>
             </div>
-            <div>
-                <a href="">About</a>
-                <a href="">Careers</a>
-                <a href="">Support</a>
+            <div className="footer__link--space">
+                <a className="footer__link--underline" href="">About</a>
+                <a className="footer__link--underline" href="">Careers</a>
+                <a className="footer__link--underline" href="">Support</a>
             </div>
             <div>
                 <a href="https://www.facebook.com/">

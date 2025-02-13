@@ -1,0 +1,18 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+
+.footer {
+    &__title {
+        @include fontMobile-Wordmark;
+        color: $colorPrimaryBlack;
+    }
+    &__link--space {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link--underline {
+        text-decoration: none;
+        @include fontMobile-SmBody;
+    }
+}
