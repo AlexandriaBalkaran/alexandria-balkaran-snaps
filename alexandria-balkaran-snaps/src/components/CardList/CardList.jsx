@@ -28,15 +28,15 @@ function PhotoList ({ photos }) {
 
 
 
-{/* <div className="photo__tags">
-  {photo.tags.map((tag) => (
-    <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
-  ))}
-</div>
-</div> */}
+// /<div className="photo__tags">
+//   {photo.tags.map((tag) => (
+//     <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
+//   ))}
+// </div>
+// </div> */
 // function Tag({ name }) {
 //     return <div>{name}</div>;
-// }
+//  }
 
 export default CardList;
 
