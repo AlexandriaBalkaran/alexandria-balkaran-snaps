@@ -1,9 +1,11 @@
 import Header from './components/Header/Header'
-import Card from './components/Card/Card'
+// import Card from './components/Card/Card'
 import CardList from './components/CardList/CardList'
 import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
-// import { useState } from 'react'
+import Filter from './components/Filter/Filter'
+
+import { useState } from 'react'
 import './App.scss'
 import '/src/styles/partials/_global.scss'
 
@@ -15,9 +17,11 @@ function App() {
     <>
       <Header/>
       <Hero></Hero>
+
+      <Filter/>
       
       <section>
-        <CardList></CardList>
+        <CardList/>
       </section>
 
       <Footer/>

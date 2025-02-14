@@ -1,0 +1,15 @@
+.tag {
+  
+    &--clickable {
+      cursor: pointer;
+      &:hover {
+        background-color: green;
+      }
+    }
+  
+    &--selected {
+      background-color: darkgreen;
+      color: whitesmoke;
+    }
+  }
+  
