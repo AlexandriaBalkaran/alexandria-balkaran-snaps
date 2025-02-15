@@ -1,42 +1,44 @@
 // import Card from '../Card/Card';
 import photos from '../../data/photos.json'
 import "./CardList.scss";
+import Filter from '../Filter/Filter';
+import { useState } from "react";
 
 function CardList () {
+    // const [selectedTag, setSelectedTag] = useState(null);
+    // const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
+    
     return (
         <section className='card-list'>
             {/* <PhotoList photos={photos} /> */}
+            {/* {filteredPhotos.map((photo) => {
+            return <PhotoCard photo={photo} key={photo.id} />;
+          })} */}
         </section>
     )
 }
 
-function PhotoList ({ photos }) {
-    return photos.map((photo) => {
-        return (
-            <div className='card__container'key={photo.id}>
-                {/* <img className='card__image' src={photo.photo} alt={photo.photographer}  /> */}
-                {/* <h4 className='card__photographer'>{photo.photographer}</h4> */}
-                {/* {photo.tags.map((tag) => { */}
-                    {/* return <div className='card__tag' key={tag}>{tag}</div>; */}
-                {/* })} */}
-            </div>
-        );
-    });
-}
+
+//     function PhotoCard({ photo }) {
+//       console.log("render PC");
+    
+//       return (
+//         <div className='card__container' key={photo.id}>
+//           <img className='card__image' src={photo.photo} alt={photo.photographer} />
+//           <h4 className='card__photographer'>{photo.photographer}</h4>
+    
+//           {photo.tags.map((tag) => (
+//             <Tag tag={tag} key={tag} />
+//           ))}
+//         </div>
+//   );
+// }
+
+//    {filteredPhotos.map((photo) => {
+//             return <PhotoCard photo={photo} key={photo.id} />;
+//           })}
 
 
-
-
-
-// /<div className="photo__tags">
-//   {photo.tags.map((tag) => (
-//     <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
-//   ))}
-// </div>
-// </div> */
-// function Tag({ name }) {
-//     return <div>{name}</div>;
-//  }
 
 export default CardList;
 

@@ -12,79 +12,76 @@
     }
   }
 // Mobile Fonts
-@mixin fontMobile-Wordmark {
+@mixin fontmobile-wordmark {
     font-family: "Newsreader";
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 400;
 }
-@mixin fontMobile-Title {
+@mixin fontmobile-title {
     font-family: "Newsreader";
     font-size: 1.625rem;
     line-height: 2.375rem;
     font-weight: 300;
 }
-@mixin fontMobile-Heading {
+@mixin fontmobile-heading {
     font-family: "Outfit";
     font-size: 1.125rem;
     line-height: 1.4375rem;
     font-weight: 500;
 }
-@mixin fontMobile-Body {
+@mixin fontmobile-body {
     font-family: "Outfit";
     font-size: .75rem;
     line-height: .9375rem;
     font-weight: 500;
 }
-@mixin fontMobile-SmBody {
+@mixin fontmobile-smbody {
     font-family: "Outfit";
     font-size: .625rem;
     line-height: .75rem;
     font-weight: 500;
 }
-@mixin fontMobile-Label {
+@mixin fontmobile-label {
     font-family: "Outfit";
     font-size: .75rem;
     line-height: .9375rem;
     font-weight: 500;
 }
 // DeskTop and Tablet Fonts
-@mixin fontTablet-Wordmark {
+@mixin fonttablet-wordmark {
     font-family: "Newsreader";
     font-size: 2.5rem;
     line-height: 2.5rem;
     font-weight: 400;
 }
-@mixin fontTablet-Title {
+@mixin fonttablet-title {
     font-family: "Newsreader";
     font-size: 3.25rem;
     line-height: 4.125rem;
     font-weight: 300;
 }
-@mixin fontMobile-Heading {
+@mixin fontmobile-heading {
     font-family: "Outfit";
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: 500;
 }
-@mixin fontMobile-Body {
+@mixin fontmobile-body {
     font-family: "Outfit";
     font-size: 1.25rem;
     line-height: 1.8125rem;
     font-weight: 500;
 }
-@mixin fontMobile-SmBody {
+@mixin fontmobile-smbody {
     font-family: "Outfit";
     font-size: .75rem;
     line-height: .9375rem;
     font-weight: 500;
 }
-@mixin fontMobile-Label {
+@mixin fontmobile-label {
     font-family: "Outfit";
     font-size: .875rem;
     line-height: 1.0938rem;
     font-weight: 500;
 }
-
-
-//changes names to common letters
