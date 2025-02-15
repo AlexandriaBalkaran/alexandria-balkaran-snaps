@@ -8,12 +8,12 @@ import Filter from './components/Filter/Filter'
 import { useState } from 'react'
 import './App.scss'
 import '/src/styles/partials/_global.scss'
-import PhotoCardList from './components/PhotoCardList/PhotoCardList'
-import FilterDrawer from './components/FilterDrawer/FilterDrawer'
+// import PhotoCardList from './components/PhotoCardList/PhotoCardList'
+// import FilterDrawer from './components/FilterDrawer/FilterDrawer'
 
 
 function App() {
-  
+  // const [selectedTag, setSelectedTag] = useState(null);
 
   return (
     <>
@@ -22,11 +22,7 @@ function App() {
       <Filter/>
     </div>
 
-    <Hero></Hero>
-    <PhotoCardList>
-    </PhotoCardList>
-    
-    <FilterDrawer></FilterDrawer>
+    {/* <Hero></Hero> */}
       
     <section>
       <CardList/>

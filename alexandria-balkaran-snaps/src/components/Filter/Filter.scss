@@ -1,8 +1,51 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
 .drawer {
-    display: none;
-    // background-color: green;
-  
-    &--open {
-      display: block;
+  display: none;
+
+  &--open {
+    display: block;
+  }
+}
+
+.card {
+  &__image {
+    width: 100%;
+  }
+  &__container {
+    background-color: $colorsecondarysage;
+    border: 1px solid $colorsecondarysea;
+    margin: 2rem;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    @include desktop {
+      border-radius: 12px;
     }
   }
+  &__photographer {
+    background-color: $colorsecondarysage;
+    position: absolute;
+    border-top-left-radius: 10px;
+    padding: 0.2rem;
+    right: 0;
+    bottom: 3rem;
+    @include fontmobile-label;
+  }
+}
+.tag {
+  background-color: $colorsecondarywhite;
+  border:1px solid $colorsecondarysea;
+  padding: .375rem .5rem; 
+  border-radius: .375rem;
+  margin: .5rem;
+  @include fontmobile-label;
+  @include desktop {
+    padding: .5rem .75rem;
+    border-radius: .75rem;
+    margin: .75rem;
+    @include fonttablet-label
+  }
+}

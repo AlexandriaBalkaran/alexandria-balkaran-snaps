@@ -1,0 +1,6 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.snaps__title--font {
+    @include fontmobile-wordmark;
+}
