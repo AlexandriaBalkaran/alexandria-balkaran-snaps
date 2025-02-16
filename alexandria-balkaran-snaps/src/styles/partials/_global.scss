@@ -13,3 +13,9 @@
 body {
     background-color: $colorprimarypistachio;
 }
+h1 {
+  @include fontmobile-wordmark;
+  @include desktop {
+    @include fonttablet-wordmark;
+  }
+}

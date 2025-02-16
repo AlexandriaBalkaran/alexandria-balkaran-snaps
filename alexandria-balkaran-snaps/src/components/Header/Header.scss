@@ -1,6 +1,13 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
-.snaps__title--font {
-    @include fontmobile-wordmark;
+.header__container {
+  background-color: $colorprimarypistachio;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }

@@ -8,25 +8,14 @@ import Filter from './components/Filter/Filter'
 import { useState } from 'react'
 import './App.scss'
 import '/src/styles/partials/_global.scss'
-// import PhotoCardList from './components/PhotoCardList/PhotoCardList'
-// import FilterDrawer from './components/FilterDrawer/FilterDrawer'
 
 
 function App() {
-  // const [selectedTag, setSelectedTag] = useState(null);
 
   return (
     <>
-    <div className='header__container'>
-      <Header/>
-      <Filter/>
-    </div>
-
-    {/* <Hero></Hero> */}
-      
-    <section>
-      <CardList/>
-    </section>
+    {/* <Header/> */}
+    <Filter/>
 
     <Footer/>
       

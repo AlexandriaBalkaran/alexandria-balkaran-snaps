@@ -3,7 +3,6 @@
 
 .drawer {
   display: none;
-
   &--open {
     display: block;
   }
@@ -47,5 +46,65 @@
     border-radius: .75rem;
     margin: .75rem;
     @include fonttablet-label
+  }
+}
+.filter {
+  &__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: $colorsecondarysage;
+  }
+  &__title {
+    background-color: $colorsecondarysage;
+    margin-top:5rem;
+    @include fontmobile-heading;
+    padding-left: 1rem;
+  }
+  &__button--color {
+    padding: .5rem 1rem;
+    width: 6rem;
+    border-radius: 1rem;
+    background-color: $colorprimarypistachio;
+    border: .125rem solid $colorprimaryforest;
+    color: $colorprimaryforest;
+    transition: filter 0.2s ease;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 1.5rem 1rem;
+    right: 0;
+    z-index: 2;
+    @include fontmobile-label;
+    &:hover {
+      cursor: pointer;
+      filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+      // filter: brightness(0) invert(1);
+    }
+    &.active {
+      // filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+      // filter: brightness(0) invert(1);
+      // background-color: red;
+    }
+    @include desktop {
+      border-radius: .75rem;
+      padding: .6875rem 1.375rem;
+    }
+  }
+  &__image {
+    // width: .7rem;
+    padding-left: .5rem;
+  }
+}
+.header--fixed {
+  display: flex;
+}
+.tag--clickable {
+  border-color: $colorprimaryforest;
+  color: $colorprimaryforest;
+  &:hover {
+    background-color: $colorprimaryforest;
+    color: $colorsecondarywhite;
   }
 }

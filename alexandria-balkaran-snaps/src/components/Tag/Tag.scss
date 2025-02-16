@@ -1,15 +1,18 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
 .tag {
   
     &--clickable {
       cursor: pointer;
       &:hover {
-        background-color: green;
+        background-color: $colorprimaryforest;
       }
     }
   
     &--selected {
-      background-color: darkgreen;
-      color: whitesmoke;
+      background-color: $colorprimaryforest;
+      color: $colorsecondarywhite;
     }
   }
   

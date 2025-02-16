@@ -3,16 +3,36 @@
 
 
 .footer {
-    &__title {
-        @include fontmobile-wordmark;
-        color: $colorprimaryblack;
+    &__container {
+        padding: 1rem;
     }
-    &__link--space {
+    &__title {
+        color: $colorprimaryblack;
+        padding: 1.5rem 0;
+    }
+    &__link-for--space , &__link-about--space {
         display: flex;
         flex-direction: column;
+        padding: .5rem 0;
     }
     &__link--underline {
         text-decoration: none;
+        color: $colorprimaryblack;
+        padding: .2rem;
         @include fontmobile-smbody;
+    }
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        color: $colorsecondarysea;
+        @include fontmobile-smbody;
+
+    }
+}
+.social__icons {
+    padding: 1rem 0;
+    & a {
+        padding-right: 1rem;
     }
 }
