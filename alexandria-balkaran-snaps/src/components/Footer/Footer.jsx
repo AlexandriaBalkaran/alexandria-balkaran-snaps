@@ -3,17 +3,21 @@ import "./Footer.scss";
 const Footer = () => {
     return (
       <footer className="footer__container">
-            <h1 className="footer__title">Snaps</h1>
-            <div className="footer__link-for--space">
-                <a className="footer__link--underline" href="">For photographers</a>
-                <a className="footer__link--underline" href="">Hire talent</a>
-                <a className="footer__link--underline" href="">Inspiration</a>
+        <div className="footer__text">
+        <h1 className="footer__title">Snaps</h1>
+            <div className="footer__link">
+                <div className="footer__link-one--space">
+                    <a className="footer__link--underline" href="">For photographers</a>
+                    <a className="footer__link--underline" href="">Hire talent</a>
+                    <a className="footer__link--underline" href="">Inspiration</a>
+                </div>
+                <div className="footer__link-two--space">
+                    <a className="footer__link--underline" href="">About</a>
+                    <a className="footer__link--underline" href="">Careers</a>
+                    <a className="footer__link--underline" href="">Support</a>
+                </div>
             </div>
-            <div className="footer__link-about--space">
-                <a className="footer__link--underline" href="">About</a>
-                <a className="footer__link--underline" href="">Careers</a>
-                <a className="footer__link--underline" href="">Support</a>
-            </div>
+        </div>
             <div className="social__icons">
                 <a href="https://www.facebook.com/">
                     <img src="./src/assets/images/Facebook.svg" alt="facebook icon"></img>

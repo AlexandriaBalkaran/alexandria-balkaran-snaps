@@ -58,13 +58,14 @@ function Filter() {
           </ul>
         </div>
       </div>
-      
-      <Hero></Hero>
+      <div className="hero-card__container">
+          <Hero></Hero>
 
-      <div>
-        {filteredPhotos.map((photo) => {
-            return <PhotoCard photo={photo} key={photo.id} />;
-          })}
+          <div className="card__container--width">
+            {filteredPhotos.map((photo) => {
+                return <PhotoCard photo={photo} key={photo.id} />;
+              })}
+          </div>
       </div>
     </>
   );
@@ -72,7 +73,6 @@ function Filter() {
 
 
   function PhotoCard({ photo }) {
-      console.log("render PC");
     
       return (
         <div className='card__container' key={photo.id}>

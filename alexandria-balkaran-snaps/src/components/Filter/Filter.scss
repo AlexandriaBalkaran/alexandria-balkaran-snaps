@@ -7,7 +7,6 @@
     display: block;
   }
 }
-
 .card {
   &__image {
     width: 100%;
@@ -15,13 +14,23 @@
   &__container {
     background-color: $colorsecondarysage;
     border: 1px solid $colorsecondarysea;
-    margin: 2rem;
+    margin: 1rem 1rem;
     border-radius: 8px;
     object-fit: cover;
     overflow: hidden;
     position: relative;
+    @include tablet {
+      width:46%;
+    }
     @include desktop {
       border-radius: 12px;
+    }
+    &--width {
+      padding: 1rem;
+      @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
   &__photographer {
@@ -41,7 +50,7 @@
   border-radius: .375rem;
   margin: .5rem;
   @include fontmobile-label;
-  @include desktop {
+  @include tablet {
     padding: .5rem .75rem;
     border-radius: .75rem;
     margin: .75rem;
@@ -54,12 +63,25 @@
   flex-wrap: wrap;
   list-style: none;
   background-color: $colorsecondarysage;
+  @include desktop {
+    width: 30%;
+    // justify-content: flex-end;
+    // position: relative;
+    // left: 70%;
+    // bottom: 2rem;
+  }
   }
   &__title {
     background-color: $colorsecondarysage;
     margin-top:5rem;
     @include fontmobile-heading;
     padding-left: 1rem;
+    @include tablet {
+      @include fonttablet-heading;
+    }
+    @include desktop {
+      width: 30%;
+    }
   }
   &__button--color {
     padding: .5rem 1rem;
@@ -79,7 +101,10 @@
     @include fontmobile-label;
     &:hover {
       cursor: pointer;
-      filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+      // filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+      background-color: $colorprimaryforest;
+      color: $colorsecondarywhite;
+      filter: none;
       // filter: brightness(0) invert(1);
     }
     &.active {
@@ -94,7 +119,12 @@
   }
   &__image {
     // width: .7rem;
+    // filter: brightness(0) invert(1);
     padding-left: .5rem;
+    transition: filter 0.2 ease;
+    &:hover {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 .header--fixed {
@@ -106,5 +136,11 @@
   &:hover {
     background-color: $colorprimaryforest;
     color: $colorsecondarywhite;
+  }
+}.hero-card__container {
+  @include desktop {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
   }
 }
