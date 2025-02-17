@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./Tag.scss";
 
 function Tag({ tag, isClickable = false, selectedTag, onClick }) {
   return (
-    <button 
+    <button
       className={`tag 
         ${isClickable ? "tag--clickable" : ""} 
-        ${selectedTag === tag ? "tag--selected" : ""}`
-      }
+        ${selectedTag === tag ? "tag--selected" : ""}`}
       onClick={() => isClickable && onClick(tag)}
     >
       {tag}

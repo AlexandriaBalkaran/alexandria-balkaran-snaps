@@ -4,24 +4,25 @@
 .tag {
   background-color: $colorsecondarywhite;
   border: 1px solid $colorsecondarysea;
-  padding: .375rem .5rem; 
-  border-radius: .375rem;
-  margin: .5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.375rem;
+  margin: 0.5rem;
   @include fontmobile-label;
-  
+
   @include tablet {
-    padding: .5rem .75rem;
-    border-radius: .75rem;
-    margin: .75rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem;
     @include fonttablet-label;
   }
-  
+
   &--clickable {
     border-color: $colorprimaryforest;
     color: $colorprimaryforest;
     cursor: pointer;
-    
-    &:hover, &.tag--selected {
+
+    &:hover,
+    &.tag--selected {
       background-color: $colorprimaryforest;
       color: $colorsecondarywhite;
     }

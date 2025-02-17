@@ -5,9 +5,6 @@
   display: none;
   &--open {
     display: block;
-    // @include desktop {
-    //     transform: translateX(0);
-    // }
   }
 }
 .filter {
@@ -16,23 +13,21 @@
     flex-wrap: wrap;
     list-style: none;
     background-color: $colorsecondarysage;
+    padding: 1rem;
+    @include tablet {
+      padding: 2rem 1rem 4rem 1rem;
+    }
     @include desktop {
       width: 30%;
     }
-    // &__content {
-    //     display: none;
-
-    //     &--open {
-    //         display: block;
-    //     }
-    // }
   }
-  
+
   &__title {
     background-color: $colorsecondarysage;
     margin-top: 5rem;
+    padding: 1rem;
     @include fontmobile-heading;
-    padding-left: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
     @include tablet {
       @include fonttablet-heading;
     }

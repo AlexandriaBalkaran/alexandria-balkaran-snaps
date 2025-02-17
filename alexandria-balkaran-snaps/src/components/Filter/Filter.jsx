@@ -7,7 +7,9 @@ import FilteredPhotos from "../FilteredPhotos/FilteredPhotos";
 
 function Filter() {
   const [selectedTag, setSelectedTag] = useState(null);
-  const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
+  const filteredPhotos = selectedTag
+    ? photos.filter((photo) => photo.tags.includes(selectedTag))
+    : photos;
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -19,16 +21,18 @@ function Filter() {
   return (
     <>
       <div className="header--fixed">
-        <FilterButton 
+        <FilterButton
           isActive={isActive}
           drawerOpen={drawerOpen}
-          handleButtonClick={handleButtonClick}/>
+          handleButtonClick={handleButtonClick}
+        />
       </div>
 
-      <FilterDrawer 
+      <FilterDrawer
         drawerOpen={drawerOpen}
         selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}/>
+        setSelectedTag={setSelectedTag}
+      />
 
       <FilteredPhotos filteredPhotos={filteredPhotos} />
     </>

@@ -1,18 +1,23 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
-
 .hero__section {
-    padding: 3rem 1rem;
-    & p {
-        @include fontmobile-body;
-        padding-bottom: 1rem;
-        padding-top: 4rem;
+  padding: 3rem 1rem;
+  & p {
+    @include fontmobile-body;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    @include tablet {
+      @include fonttablet-body;
     }
-    & span {
-        font-style: italic;
+  }
+  & span {
+    font-style: italic;
+  }
+  & h2 {
+    @include fontmobile-title;
+    @include tablet {
+      @include fonttablet-title;
     }
-    & h2 {
-        @include fontmobile-title;
-    }
+  }
 }

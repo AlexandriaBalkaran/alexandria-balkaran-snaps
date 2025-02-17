@@ -2,15 +2,15 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 
 .header__container {
-    display: flex;
+  display: flex;
 }
 .filter__button {
-    display: flex;
+  display: flex;
 }
 .hero-photos__content {
-    @include desktop {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        gap: 4rem;
-    }
+  @include desktop {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4rem;
+  }
 }

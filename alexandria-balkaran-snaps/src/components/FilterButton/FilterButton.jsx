@@ -1,15 +1,19 @@
-import React from 'react';
-import './FilterButton.scss';
+import React from "react";
+import "./FilterButton.scss";
 
 function FilterButton({ isActive, drawerOpen, handleButtonClick }) {
   return (
     <div className="filter__button">
-      <button 
-        className={`filter__button--color ${isActive ? 'active' : ''}`}
-        onClick={handleButtonClick}>
-            
+      <button
+        className={`filter__button--color ${isActive ? "active" : ""}`}
+        onClick={handleButtonClick}
+      >
         {drawerOpen ? "" : ""} Filters
-        <img className="filter__image" src="/src/assets/images/Filter.svg" alt="filter icon" />
+        <img
+          className="filter__image"
+          src="/src/assets/images/Filter.svg"
+          alt="filter icon"
+        />
       </button>
     </div>
   );

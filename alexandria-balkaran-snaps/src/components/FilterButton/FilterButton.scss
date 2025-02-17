@@ -3,11 +3,11 @@
 
 .filter {
   &__button--color {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     width: 6rem;
     border-radius: 1rem;
     background-color: $colorprimarypistachio;
-    border: .125rem solid $colorprimaryforest;
+    border: 0.125rem solid $colorprimaryforest;
     color: $colorprimaryforest;
     transition: all 0.2s ease;
     position: fixed;
@@ -18,25 +18,27 @@
     right: 0;
     z-index: 2;
     @include fontmobile-label;
-    
-    &:hover, &.active {
+    @include tablet {
+      @include fonttablet-label;
+      width: 7rem;
+      padding: 0.6875rem 1.375rem;
+      border-radius: 2rem;
+    }
+
+    &:hover,
+    &.active {
       cursor: pointer;
       background-color: $colorprimaryforest;
       color: $colorsecondarywhite;
-      
+
       .filter__image {
         filter: brightness(0) invert(1);
       }
     }
-    
-    @include desktop {
-      border-radius: .75rem;
-      padding: .6875rem 1.375rem;
-    }
   }
-  
+
   &__image {
-    padding-left: .5rem;
+    padding-left: 0.5rem;
     transition: filter 0.2s ease;
   }
 }
