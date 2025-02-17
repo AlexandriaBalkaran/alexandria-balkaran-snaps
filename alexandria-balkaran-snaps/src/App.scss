@@ -1,3 +1,5 @@
+@use "/src/styles/partials/_global.scss" as *;
+@use "/src/styles/partials/_mixins.scss" as *;
 // .header__container {
 //     display: flex;
 //     justify-content: space-between;
@@ -8,4 +10,11 @@
 }
 .filter__button {
     display: flex;
+}
+.hero-photos__content {
+    @include desktop {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 4rem;
+    }
 }

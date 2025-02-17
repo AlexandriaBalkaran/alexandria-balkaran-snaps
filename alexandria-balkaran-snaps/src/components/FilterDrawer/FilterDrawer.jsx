@@ -1,25 +1,30 @@
 import React from 'react';
-import Tag from "/src/components/Tag/Tag.jsx";
-import tags from "/src/data/tags.json";
+import Tag from "../Tag/Tag";
+import tags from "../../data/tags.json";
+import './FilterDrawer.scss';
 
 function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
+  const handleTagClick = (tag) => {
+    if (selectedTag === tag) {
+      setSelectedTag(null);
+    } else {
+      setSelectedTag(tag);
+    }
+  };
+
   return (
     <div className="filter__content">
       <div className={`drawer ${drawerOpen ? "drawer--open" : ""}`}>
         <h2 className="filter__title">Filters</h2>
         <ul className="filter__list">
           {tags.map((tag) => (
-            <li
-              key={tag}
-              onClick={() => {
-                if (selectedTag === tag) {
-                  setSelectedTag(null);
-                } else {
-                  setSelectedTag(tag);
-                }
-              }}
-            >
-              <Tag tag={tag} isClickable selectedTag={selectedTag} />
+            <li key={tag}>
+              <Tag 
+                tag={tag} 
+                isClickable={true}
+                selectedTag={selectedTag}
+                onClick={() => handleTagClick(tag)}
+              />
             </li>
           ))}
         </ul>

@@ -38,7 +38,10 @@
         text-decoration: none;
         color: $colorprimaryblack;
         padding: .2rem;
-        @include fontmobile-smbody;
+        @include fontmobile-body;
+        @include tablet {
+            @include fonttablet-body;
+        }
     }
     &__copyright {
         display: flex;

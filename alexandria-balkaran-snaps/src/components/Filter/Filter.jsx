@@ -20,7 +20,6 @@ function Filter() {
   return (
     <>
       <div className="header--fixed">
-        <Header />
         <FilterButton 
           isActive={isActive}
           drawerOpen={drawerOpen}

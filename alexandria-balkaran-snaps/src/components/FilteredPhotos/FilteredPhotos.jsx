@@ -1,11 +1,12 @@
 import React from 'react';
-import Tag from "/src/components/Tag/Tag.jsx";
+import Tag from "../Tag/Tag";
 import Hero from "../Hero/Hero";
+import './FilteredPhotos.scss';
 
 function FilteredPhotos({ filteredPhotos }) {
   return (
     <div className="hero-card__container">
-      <Hero />
+    
       <div className="card__container--width">
         {filteredPhotos.map((photo) => (
           <PhotoCard photo={photo} key={photo.id} />

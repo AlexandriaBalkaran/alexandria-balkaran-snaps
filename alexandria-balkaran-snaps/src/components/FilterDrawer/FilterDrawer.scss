@@ -1,0 +1,38 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.drawer {
+  display: none;
+  &--open {
+    display: block;
+    @include desktop {
+        transform: translateX(0);
+    }
+  }
+}
+
+.filter {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: $colorsecondarysage;
+    @include desktop {
+      width: 30%;
+    //   display: block;
+    }
+  }
+  
+  &__title {
+    background-color: $colorsecondarysage;
+    margin-top: 5rem;
+    @include fontmobile-heading;
+    padding-left: 1rem;
+    @include tablet {
+      @include fonttablet-heading;
+    }
+    @include desktop {
+      width: 30%;
+    }
+  }
+}

@@ -1,18 +1,48 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
+// .tag {
+  
+//     &--clickable {
+//       cursor: pointer;
+//       &:hover {
+//         background-color: $colorprimaryforest;
+//       }
+//     }
+  
+//     &--selected {
+//       background-color: $colorprimaryforest;
+//       color: $colorsecondarywhite;
+//     }
+//   }
+  
+
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
 .tag {
+  background-color: $colorsecondarywhite;
+  border: 1px solid $colorsecondarysea;
+  padding: .375rem .5rem; 
+  border-radius: .375rem;
+  margin: .5rem;
+  @include fontmobile-label;
   
-    &--clickable {
-      cursor: pointer;
-      &:hover {
-        background-color: $colorprimaryforest;
-      }
-    }
+  @include tablet {
+    padding: .5rem .75rem;
+    border-radius: .75rem;
+    margin: .75rem;
+    @include fonttablet-label;
+  }
   
-    &--selected {
+  &--clickable {
+    border-color: $colorprimaryforest;
+    color: $colorprimaryforest;
+    cursor: pointer;
+    
+    &:hover, &.tag--selected {
       background-color: $colorprimaryforest;
       color: $colorsecondarywhite;
     }
   }
-  
+}

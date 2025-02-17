@@ -1,29 +1,46 @@
-import Header from './components/Header/Header'
-// import Card from './components/Card/Card'
-import CardList from './components/CardList/CardList'
-import Hero from './components/Hero/Hero'
-import Footer from './components/Footer/Footer'
-import Filter from './components/Filter/Filter'
+import React, { useState } from 'react';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
 import FilterButton from './components/FilterButton/FilterButton';
 import FilterDrawer from './components/FilterDrawer/FilterDrawer';
 import FilteredPhotos from './components/FilteredPhotos/FilteredPhotos';
-
-import { useState } from 'react'
-import './App.scss'
-import '/src/styles/partials/_global.scss'
-
+import Footer from './components/Footer/Footer';
+import photos from './data/photos.json';
+import './App.scss';
 
 function App() {
+  const [selectedTag, setSelectedTag] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const filteredPhotos = selectedTag 
+    ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
+
+  const handleButtonClick = () => {
+    setIsActive(!isActive);
+    setDrawerOpen(!drawerOpen);
+  };
 
   return (
-    <>
-    {/* <Header/> */}
-    <Filter/>
-    <CardList></CardList>
-    <Footer/>
+    <div className="app">
+      <div className="header--fixed">
+        <Header />
+        <FilterButton 
+          isActive={isActive} drawerOpen={drawerOpen} handleButtonClick={handleButtonClick}/>
+      </div>
       
-    </>
-  )
+      <FilterDrawer 
+        drawerOpen={drawerOpen} selectedTag={selectedTag} setSelectedTag={setSelectedTag}/>
+
+      <div className='hero-photos__content'> 
+           <Hero/>
+
+           <FilteredPhotos filteredPhotos={filteredPhotos} />
+      </div>
+      
+      <Footer/>
+    </div>
+  );
 }
 
-export default App
+export default App;
