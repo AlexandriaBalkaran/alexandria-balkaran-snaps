@@ -1,25 +1,6 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
-// .tag {
-  
-//     &--clickable {
-//       cursor: pointer;
-//       &:hover {
-//         background-color: $colorprimaryforest;
-//       }
-//     }
-  
-//     &--selected {
-//       background-color: $colorprimaryforest;
-//       color: $colorsecondarywhite;
-//     }
-//   }
-  
-
-@use "/src/styles/partials/_mixins.scss" as *;
-@use "/src/styles/partials/_variables.scss" as *;
-
 .tag {
   background-color: $colorsecondarywhite;
   border: 1px solid $colorsecondarysea;

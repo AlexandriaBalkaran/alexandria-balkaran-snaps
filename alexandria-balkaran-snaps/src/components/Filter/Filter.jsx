@@ -1,7 +1,6 @@
 import { useState } from "react";
 import photos from "/src/data/photos.json";
 import "/src/components/Filter/Filter.scss";
-import Header from "../Header/Header";
 import FilterButton from "../FilterButton/FilterButton";
 import FilterDrawer from "../FilterDrawer/FilterDrawer";
 import FilteredPhotos from "../FilteredPhotos/FilteredPhotos";
@@ -23,15 +22,13 @@ function Filter() {
         <FilterButton 
           isActive={isActive}
           drawerOpen={drawerOpen}
-          handleButtonClick={handleButtonClick}
-        />
+          handleButtonClick={handleButtonClick}/>
       </div>
 
       <FilterDrawer 
         drawerOpen={drawerOpen}
         selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}
-      />
+        setSelectedTag={setSelectedTag}/>
 
       <FilteredPhotos filteredPhotos={filteredPhotos} />
     </>

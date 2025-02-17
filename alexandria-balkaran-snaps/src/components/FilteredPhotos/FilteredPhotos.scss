@@ -48,7 +48,9 @@
 .hero-card__container {
   @include desktop {
     display: flex;
-    width: 70%;
     flex-direction: column;
+    & .drawer--open {
+        width: 70%;
+    }
   }
 }

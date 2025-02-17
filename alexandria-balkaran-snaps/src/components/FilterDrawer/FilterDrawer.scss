@@ -5,12 +5,11 @@
   display: none;
   &--open {
     display: block;
-    @include desktop {
-        transform: translateX(0);
-    }
+    // @include desktop {
+    //     transform: translateX(0);
+    // }
   }
 }
-
 .filter {
   &__list {
     display: flex;
@@ -19,8 +18,14 @@
     background-color: $colorsecondarysage;
     @include desktop {
       width: 30%;
-    //   display: block;
     }
+    // &__content {
+    //     display: none;
+
+    //     &--open {
+    //         display: block;
+    //     }
+    // }
   }
   
   &__title {

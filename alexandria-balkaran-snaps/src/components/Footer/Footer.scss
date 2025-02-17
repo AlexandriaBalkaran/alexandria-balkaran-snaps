@@ -12,6 +12,14 @@
             justify-content: space-between;
             align-items: flex-start;
         }
+        @include desktop {
+            flex: 1;
+        }
+        &-icons {
+            @include desktop {
+                display: flex;
+            }
+        }
     }
     &__title {
         color: $colorprimaryblack;
@@ -57,6 +65,11 @@
 }
 .social__icons {
     padding: 1rem 0;
+    @include desktop {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 2.5rem;
+    }
     & a {
         padding-right: 1rem;
     }

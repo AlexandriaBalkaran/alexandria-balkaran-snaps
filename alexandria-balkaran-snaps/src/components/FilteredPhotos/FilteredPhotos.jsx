@@ -1,6 +1,5 @@
 import React from 'react';
 import Tag from "../Tag/Tag";
-import Hero from "../Hero/Hero";
 import './FilteredPhotos.scss';
 
 function FilteredPhotos({ filteredPhotos }) {
