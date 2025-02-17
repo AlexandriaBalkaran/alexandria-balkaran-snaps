@@ -65,11 +65,7 @@
   background-color: $colorsecondarysage;
   @include desktop {
     width: 30%;
-    // justify-content: flex-end;
-    // position: relative;
-    // left: 70%;
-    // bottom: 2rem;
-  }
+    }
   }
   &__title {
     background-color: $colorsecondarysage;
@@ -104,10 +100,15 @@
       // filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
       background-color: $colorprimaryforest;
       color: $colorsecondarywhite;
-      filter: none;
-      // filter: brightness(0) invert(1);
+      // filter: none;
+      .filter__image{
+        filter: brightness(0) invert(1);
+      }
+
+      // 
+      
     }
-    &.active {
+    &:active {
       // filter:invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
       // filter: brightness(0) invert(1);
       // background-color: red;

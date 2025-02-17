@@ -4,6 +4,9 @@ import CardList from './components/CardList/CardList'
 import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
 import Filter from './components/Filter/Filter'
+import FilterButton from './components/FilterButton/FilterButton';
+import FilterDrawer from './components/FilterDrawer/FilterDrawer';
+import FilteredPhotos from './components/FilteredPhotos/FilteredPhotos';
 
 import { useState } from 'react'
 import './App.scss'
@@ -16,7 +19,7 @@ function App() {
     <>
     {/* <Header/> */}
     <Filter/>
-
+    <CardList></CardList>
     <Footer/>
       
     </>
