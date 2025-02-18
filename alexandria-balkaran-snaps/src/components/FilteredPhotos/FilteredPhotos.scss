@@ -19,8 +19,12 @@
       width: 45%;
     }
     @include desktop {
-      width: 29%;
+      width: 24rem;
       border-radius: 0.75rem;
+      & .drawer--open {
+        width: 50%;
+        min-width: 25rem;
+      }
     }
 
     &--width {

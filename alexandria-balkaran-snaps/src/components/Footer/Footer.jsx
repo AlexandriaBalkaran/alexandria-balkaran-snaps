@@ -31,6 +31,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="footer__div"></div>
         <div className="social__icons">
           <a href="https://www.facebook.com/">
             <img
@@ -58,6 +59,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <div className="footer__div--empty"></div>
       <div className="footer__copyright">
         <p className="footer__info">© 2024 Snaps</p>
         <p className="footer__info">. Terms</p>

@@ -33,16 +33,18 @@ function App() {
         />
       </div>
 
-      <FilterDrawer
-        drawerOpen={drawerOpen}
-        selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}
-      />
+      <div className="main__content">
+        <div className={`filter__drawer ${drawerOpen ? 'filter__drawer--open' : ''}`}>
+          <FilterDrawer
+            drawerOpen={drawerOpen}
+            selectedTag={selectedTag}
+            setSelectedTag={setSelectedTag}/>
+        </div>
 
-      <div className="hero-photos__content">
-        <Hero />
-
-        <FilteredPhotos filteredPhotos={filteredPhotos} />
+        <div className="hero-photos__content">
+          <Hero />
+          <FilteredPhotos filteredPhotos={filteredPhotos} />
+        </div>
       </div>
 
       <Footer />

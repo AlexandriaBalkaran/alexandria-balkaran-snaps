@@ -4,6 +4,9 @@
 .footer {
   &__container {
     padding: 1rem;
+    @include desktop {
+        padding-bottom: 1.5rem;
+    }
   }
   &__text {
     @include tablet {
@@ -63,6 +66,24 @@
     @include tablet {
       width: 40%;
       @include fonttablet-smbody;
+    }
+  }
+  &__div {
+    @include tablet {
+        width: 100%;
+        height: 6rem;
+    }
+    @include desktop {
+        width: 0%;
+        height: 0rem;
+    }
+  }
+  &__div--empty {
+    width: 0%;
+    height: 0;
+    @include desktop {
+        width: 100%;
+        height: 8rem;
     }
   }
 }
