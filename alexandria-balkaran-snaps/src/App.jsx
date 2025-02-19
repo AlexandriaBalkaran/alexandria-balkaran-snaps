@@ -5,24 +5,20 @@ import photos from "./data/photos.json";
 import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import FilteredPhotos from "./components/FilteredPhotos/FilteredPhotos";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter> 
       {/* <Header /> */}
-      <HomePage></HomePage>
-      {/* <Hero /> */}
-      {/* <Footer /> */}
-
-      {/* <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/photo/:id" element={<FilteredPhotos />} />
-      </Routes>
-    </BrowserRouter> */}
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/photo/:id" element={<FilteredPhotos />} />
+    </Routes>
+       {/* <Footer /> */}
+  </BrowserRouter>
   
   );
 }
