@@ -6,6 +6,7 @@ import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import FilteredPhotos from "./components/FilteredPhotos/FilteredPhotos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CommentsPage from "./pages/CommentsPage/CommentsPage";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <Header /> */}
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/photo/:id" element={<FilteredPhotos />} />
+      <Route path="/photo" element={<FilteredPhotos />} />
+      <Route path="/photo/:id" element={<CommentsPage />} />
     </Routes>
        {/* <Footer /> */}
   </BrowserRouter>
