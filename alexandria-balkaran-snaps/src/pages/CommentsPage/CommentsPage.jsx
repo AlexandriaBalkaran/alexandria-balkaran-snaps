@@ -36,10 +36,14 @@ function CommentsPage() {
   
     return (
       <div>
-        photo -- {id}
-        <div>title: {photo.photoDescription}</div>
+        {/* photo -- {id} */}
+
+        <img src={photo.photo} alt={photo.photoDescription} />
+        {/* ^^ not sure if this is right */}
+
+        {/* <div>title: {photo.photoDescription}</div> */}
         <div>num comments: {comments.length}</div>
-        <Tag>{photo.photographer}</Tag>
+        {/* <Tag>{photo.photographer}</Tag> */}
         <div>
           <Link to="/">Back</Link>
         </div>
