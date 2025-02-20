@@ -1,39 +1,43 @@
-// import React from "react";
-// import "./CommentForm.scss";
+// Maaybe we shouldn't use on change 
 
+import { useState } from "react";
+import ".CommentForm.scss";
 
-// <div className="form" id="form">
-// <form className="comments__form" id="comments__form">
-//   <div className="form__input">
-//     <div className="form__container">
-//       <label className="form__name">
-//         NAME
-//         <input
-//           type="text"
-//           name="name"
-//           className="name-input"
-//           placeholder="Enter your name"
-//         />
-//       </label>
-//       <label className="form__comment">
-//         COMMENT
-//         <textarea
-//           name="comment"
-//           className="comment-input"
-//           placeholder="Add a new comment"
-//           defaultValue={""}
-//         />
-//       </label>
-//       <div className="comment__button--size">
-//         <button className="comment__button--style">COMMENT</button>
-//       </div>
-//     </div>
-//   </div>
-// </form>
-// <div className="comments__section" id="comments__section">
-//   <div className="comment__container">
-//     <div className="name-date__container" />
-//   </div>
-// </div>
-// </div>
-// </>
+function CommentForm() {
+    const [name, setName] = useState("");
+    const [comment, setComment] = useState("");
+  
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+      };
+    
+      const handleCommentChange = (event) => {
+        setComment(event.target.value);
+      };
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+
+return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name: <input 
+        type="name" 
+        name="name-input" 
+        onChange={handleChangeName} 
+        value={name}/>
+      </label>
+      <label>
+        Comment: <input 
+        type="comment" 
+        name="comment-input" 
+        onChange={handleChangeComment} 
+        value={comment}
+        className={`form__input ${isPasswordValid() ? "" : "form__input--invalid"}`} />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default CommentForm;
