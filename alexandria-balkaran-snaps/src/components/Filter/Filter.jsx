@@ -1,5 +1,5 @@
 import { useState } from "react";
-import photos from "/src/data/photos.json";
+// import photos from "/src/data/photos.json";
 import "/src/components/Filter/Filter.scss";
 import FilterButton from "../FilterButton/FilterButton";
 import FilterDrawer from "../FilterDrawer/FilterDrawer";
