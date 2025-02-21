@@ -7,10 +7,12 @@ function CommentsDisplay({ comments }) {
         return date.toLocaleDateString(timestamp)
         };
     
+    const sortedComments = [...comments].sort((a, b) => b.timestamp - a.timestamp);
+
   return (
     <div className="comments-display">
       <h3>Comments ({comments.length})</h3>
-      {comments.map((comment) => (
+      {sortedComments.map((comment) => (
         <div key={comment.id} className="comment">
           <p className="comment-author">{comment.name}</p>
           <p className="comment-text">{comment.comment}</p>

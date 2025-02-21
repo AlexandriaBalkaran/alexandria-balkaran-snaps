@@ -32,7 +32,6 @@ function CommentForm({fetchComments, commentsURL}) {
     };
 
     
-
     return (
         <form onSubmit={handleSubmit}>
             <label>
