@@ -4,6 +4,7 @@ import axios from "axios";
 import Tag from "../../components/Tag/Tag";
 import "./CommentsPage.scss";
 import CommentsDisplay from "../../components/CommentsDisplay/CommentsDisplay";
+import CommentForm from "../../components/CommentForm/CommentForm"
 
 function CommentsPage() {
   const { id } = useParams();
@@ -22,14 +23,14 @@ function CommentsPage() {
 
   async function fetchPhoto() {
     const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=1c1459ab-a5fe-4f24-a3d6-a9b6f153981e`
+      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
     );
     setPhoto(data);
   }
 
   async function fetchComments() {
     const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=1c1459ab-a5fe-4f24-a3d6-a9b6f153981e`
+      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
     );
     setComments(data);
   }
@@ -43,7 +44,6 @@ function CommentsPage() {
     <div className="comments-page__container">
       <div className="photo-section">
         <img className="comments-page__image" src={photo.photo} alt={photo.photoDescription} />
-        {/* <h2>{photo.photoDescription}</h2> */}
         <div className="tags-container">
           {photo.tags.map((tag) => (
             <Tag tag={tag} key={tag} />
@@ -53,9 +53,14 @@ function CommentsPage() {
         <p>Likes: {photo.likes}</p>
         <p>{formatDate(photo.timestamp)}</p>
       </div>
-
+        
     </div>
-      <CommentsDisplay comments={comments} />
+      <div>
+          <CommentForm/>
+      </div>
+      <div>
+        <CommentsDisplay comments={comments} />
+      </div>
       <div>
         <Link to="/">Back</Link>
       </div>
