@@ -10,6 +10,7 @@ function CommentsPage() {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
   const [comments, setComments] = useState([]);
+  const commentsURL = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
@@ -28,10 +29,9 @@ function CommentsPage() {
     setPhoto(data);
   }
 
+
   async function fetchComments() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
-    );
+    const { data } = await axios.get(commentsURL);
     setComments(data);
   }
 
@@ -56,7 +56,7 @@ function CommentsPage() {
         
     </div>
       <div>
-          <CommentForm/>
+          <CommentForm commentsURL={commentsURL} fetchComments={fetchComments}/>
       </div>
       <div>
         <CommentsDisplay comments={comments} />
