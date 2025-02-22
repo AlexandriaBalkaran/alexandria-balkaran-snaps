@@ -1,7 +1,7 @@
 import React from "react";
 import Tag from "../Tag/Tag";
-import tags from "../../data/tags.json";
 import "./FilterDrawer.scss";
+import tags from "../../data/tags.json";
 
 function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
   const handleTagClick = (tag) => {

@@ -1,0 +1,10 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+input {
+    width: 90%;
+    border:2px solid $colorsecondarysage;
+    &:error {
+        border:2px solid #B10606;
+    }
+}
