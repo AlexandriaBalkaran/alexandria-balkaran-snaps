@@ -5,7 +5,7 @@ import Tag from "../../components/Tag/Tag";
 import "./CommentsPage.scss";
 import CommentsDisplay from "../../components/CommentsDisplay/CommentsDisplay";
 import CommentForm from "../../components/CommentForm/CommentForm"
-import "/src/data/tags.json"
+// import "/src/data/tags.json"
 
 function CommentsPage() {
   const { id } = useParams();

@@ -32,12 +32,13 @@ function CommentForm({fetchComments, commentsURL}) {
         console.log("submit", name, comment);
 
         try {
-          await axios.post(commentsURL, { name, comment });
+        const response = await axios.post(commentsURL, { name, comment });
           fetchComments();
 
           setName("");
           setComment("");
           setError(false);
+          return response
         } catch (e) {
           console.error(e);
         }
@@ -52,7 +53,9 @@ function CommentForm({fetchComments, commentsURL}) {
                 name="name-input" 
                 onChange={handleNameChange} 
                 value={name}
-                // className={error && !name ? "error" : ""}
+                // className={form__name && !name ? "error" : ""}
+                className={`form__name ${error && name.trim("") === "" ? "form__name--invalid" : ""
+                  }`}
                 />
             </label>
             <label>
@@ -62,6 +65,8 @@ function CommentForm({fetchComments, commentsURL}) {
                 onChange={handleCommentChange} 
                 value={comment} 
                 // className={error && !comment ? "error" : ""}
+                className={`form__comment ${error && comment.trim("") === "" ? "form__comment--invalid" : ""
+                }`}
                 />
             </label>
             <button type="submit">Submit</button>

@@ -3,8 +3,17 @@
 
 input {
     width: 90%;
-    border:2px solid $colorsecondarysage;
-    &:error {
-        border:2px solid #B10606;
+}
+.form {
+    &__name , &__comment {
+        border-style: none;
+        outline: none;
+        border:2px solid $colorsecondarysage;
+        &:focus {
+            border:2px solid $colorprimaryforest;
+        }
+        &--invalid {
+            border:2px solid #B10606
+        }
     }
 }
