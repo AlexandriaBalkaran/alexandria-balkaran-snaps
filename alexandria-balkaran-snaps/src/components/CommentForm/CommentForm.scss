@@ -3,16 +3,8 @@
 
 form {
     margin: 0 1rem;
-}
-.input-name , .input-comment  {
-    min-width: 17.5rem;
-    height: 1.875rem;
-    padding: .5rem;
-    border-radius: 10%;
-
     @include tablet {
-        min-height: 2.5rem;
-        padding: .5rem 1rem;
+        margin: 0 1.5rem; 
     }
 }
 .form {
@@ -20,7 +12,10 @@ form {
         border-style: none;
         outline: none;
         margin-top: .5rem;
-        // width: 90%;
+        border-radius: 4px;
+        min-width: 17.5rem;
+            height: 1.875rem;
+        padding: .5rem;
         border:2px solid $colorsecondarysea;
         &:focus {
             border:2px solid $colorprimaryforest;
@@ -28,12 +23,22 @@ form {
         &--invalid {
             border:2px solid #B10606;
         }
-    
+        @include tablet {
+            min-height: 2.5rem;
+            padding: .5rem 1rem;
+        }
+    }
+    &__comment {
+        height: 4rem;
     }
     &__container {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
+    @include fontmobile-body;
+    @include tablet {
+        @include fonttablet-body;
+    }
     }
 }
 .submit {

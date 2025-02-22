@@ -14,7 +14,7 @@ function CommentsDisplay({ comments }) {
     <div className="comments-display__container">
       <h3 className='comments__title'>{comments.length} Comments</h3>
       {sortedComments.map((comment) => (
-        <div className="comments-text__container" key={comment.id} className="comment">
+        <div className="comments-text__container" key={comment.id}>
           <div className='comments-name-date__container'>
             <p className="comments-author">{comment.name}</p>
             <p className="comments-date">{formatDate(comment.timestamp)}</p>

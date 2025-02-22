@@ -22,13 +22,7 @@ function CommentForm({fetchComments, commentsURL}) {
         if (name.trim() === "" || comment.trim() === "") {
          return;
         }
-        // alert('You must fill out both name and comment fields');
-     
-        // if (nameInput === "") {
-        //     input.classList.add("container__potter-button-error");
-        //     return;
-        // }
-
+        
         console.log("submit", name, comment);
 
         try {
@@ -59,7 +53,7 @@ function CommentForm({fetchComments, commentsURL}) {
             </label>
             <label className="form__container">
                 Comment <input 
-                type="text" 
+                type="textarea" 
                 name="input-comment" 
                 onChange={handleCommentChange} 
                 value={comment} 

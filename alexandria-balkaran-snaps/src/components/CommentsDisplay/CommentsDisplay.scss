@@ -5,6 +5,11 @@
     &-display__container {
     margin: 0 1rem;
     @include fontmobile-body;
+    @include tablet {
+        @include fonttablet-body;
+        padding: 0 1.5rem;
+        margin-bottom: 4rem;
+    }
     }
     &-name-date__container {
         display: flex;

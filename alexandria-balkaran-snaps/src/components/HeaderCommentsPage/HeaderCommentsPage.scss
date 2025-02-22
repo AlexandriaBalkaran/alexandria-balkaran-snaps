@@ -5,6 +5,8 @@
   background-color: $colorprimarypistachio;
   width: 100%;
   padding: 1.5rem 1rem;
+  position: absolute;
+  top: 0;
 }
 header {
   position: fixed;
@@ -14,7 +16,16 @@ header {
 .home__button {
   text-decoration: none;
   cursor: pointer;
+  &-text {
+    text-decoration: none;
+    color: $colorprimaryforest;
+    @include fontmobile-heading;
+  }
+  &-img {
+    padding-right: .5rem;
+  }
 }
 nav {
   display: flex;
+  justify-content: space-between;
 }
