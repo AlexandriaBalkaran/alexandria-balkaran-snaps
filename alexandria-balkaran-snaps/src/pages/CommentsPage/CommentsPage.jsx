@@ -6,6 +6,7 @@ import "./CommentsPage.scss";
 import CommentsDisplay from "../../components/CommentsDisplay/CommentsDisplay";
 import CommentForm from "../../components/CommentForm/CommentForm"
 import HeaderCommentsPage from "../../components/HeaderCommentsPage/HeaderCommentsPage";
+import CommentsPhotoCard from "../../components/CommentsPhotoCard/CommentsPhotoCard";
 
 function CommentsPage() {
   const { id } = useParams();
@@ -41,21 +42,7 @@ function CommentsPage() {
   return (
     <>
     <HeaderCommentsPage/>
-
-    <div className="comments-page__container">
-      <div className="photo-section">
-        <img className="comments-page__image" src={photo.photo} alt={photo.photoDescription} />
-        <div className="tags-container">
-          {photo.tags.map((tag) => (
-            <Tag tag={tag} key={tag} />
-          ))}
-        </div>
-        <p><img src="../src/assets/images/Like_Outline.svg" alt="heart outline of image"/>{photo.likes}likes</p>
-        <p>{formatDate(photo.timestamp)}</p>
-        <p>Photo by {photo.photographer}</p>
-      </div>
-        
-    </div>
+    <CommentsPhotoCard photo={photo} formatDate={formatDate}/>
       <div>
           <CommentForm commentsURL={commentsURL} fetchComments={fetchComments}/>
       </div>

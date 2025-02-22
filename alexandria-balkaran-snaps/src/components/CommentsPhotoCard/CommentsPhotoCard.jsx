@@ -1,0 +1,27 @@
+import React from 'react';
+import "./CommentsPhotoCard.scss";
+
+
+import Tag from "../../components/Tag/Tag";
+
+function CommentsPhotoCard({ photo, formatDate }) {
+  return (
+    <div className="comments-page__container">
+    <div className="photo-section">
+      <img className="comments-page__image" src={photo.photo} alt={photo.photoDescription} />
+      <div className="tags-container">
+        {photo.tags.map((tag) => (
+          <Tag tag={tag} key={tag} />
+        ))}
+      </div>
+      <div className="photo-section__text">
+        <p><img src="../src/assets/images/Like_Outline.svg" alt="heart outline of image"/> {photo.likes} likes</p>
+        <p>{formatDate(photo.timestamp)}</p>
+        <p>Photo by {photo.photographer}</p>
+      </div>
+    </div>
+    </div>
+  );
+}
+
+export default CommentsPhotoCard;
