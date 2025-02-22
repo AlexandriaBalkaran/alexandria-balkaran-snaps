@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 // import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
-// import photos from "./data/photos.json";
+import Footer from "./components/Footer/Footer";
 import "./App.scss";
 import HomePage from "./pages/HomePage/HomePage";
 import FilteredPhotos from "./components/FilteredPhotos/FilteredPhotos";
@@ -19,7 +18,7 @@ function App() {
       <Route path="/photo" element={<FilteredPhotos />} />
       <Route path="/photo/:id" element={<CommentsPage />} />
     </Routes>
-       {/* <Footer /> */}
+       <Footer />
   </BrowserRouter>
   
   );

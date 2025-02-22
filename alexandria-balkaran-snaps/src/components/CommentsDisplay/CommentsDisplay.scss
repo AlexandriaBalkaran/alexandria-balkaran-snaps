@@ -1,0 +1,23 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.comments {
+    &-display__container {
+    margin: 0 1rem;
+    @include fontmobile-body;
+    }
+    &-name-date__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: $colorprimaryforest;
+        border-top: .125rem solid $colorsecondarysea;
+        padding-top: 1rem;
+    }
+    &-text {
+        padding-top: 1rem;
+    }
+    &__title , &-text {
+        padding-bottom: 1rem;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./CommentsDisplay.scss";
 
 function CommentsDisplay({ comments }) {
 
@@ -10,13 +11,15 @@ function CommentsDisplay({ comments }) {
     const sortedComments = [...comments].sort((a, b) => b.timestamp - a.timestamp);
 
   return (
-    <div className="comments-display">
-      <h3>Comments ({comments.length})</h3>
+    <div className="comments-display__container">
+      <h3 className='comments__title'>{comments.length} Comments</h3>
       {sortedComments.map((comment) => (
-        <div key={comment.id} className="comment">
-          <p className="comment-author">{comment.name}</p>
-          <p className="comment-text">{comment.comment}</p>
-          <p className="comment-date">{formatDate(comment.timestamp)}</p>
+        <div className="comments-text__container" key={comment.id} className="comment">
+          <div className='comments-name-date__container'>
+            <p className="comments-author">{comment.name}</p>
+            <p className="comments-date">{formatDate(comment.timestamp)}</p>
+          </div>
+          <p className="comments-text">{comment.comment}</p>
         </div>
       ))}
     </div>

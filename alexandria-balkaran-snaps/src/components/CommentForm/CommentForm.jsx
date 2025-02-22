@@ -47,29 +47,29 @@ function CommentForm({fetchComments, commentsURL}) {
     
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                Name: <input 
+            <label className="form__container">
+                Name <input 
                 type="text" 
-                name="name-input" 
+                name="input-name" 
                 onChange={handleNameChange} 
                 value={name}
-                // className={form__name && !name ? "error" : ""}
                 className={`form__name ${error && name.trim("") === "" ? "form__name--invalid" : ""
                   }`}
                 />
             </label>
-            <label>
-                Comment: <input 
+            <label className="form__container">
+                Comment <input 
                 type="text" 
-                name="comment-input" 
+                name="input-comment" 
                 onChange={handleCommentChange} 
                 value={comment} 
-                // className={error && !comment ? "error" : ""}
                 className={`form__comment ${error && comment.trim("") === "" ? "form__comment--invalid" : ""
                 }`}
                 />
             </label>
-            <button type="submit">Submit</button>
+            <div className="submit__container">
+                <button className="submit__button" type="submit">Submit</button>
+            </div>
         </form>
     );
 }

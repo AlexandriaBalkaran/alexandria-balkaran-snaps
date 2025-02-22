@@ -4,7 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import FilteredPhotos from "../../components/FilteredPhotos/FilteredPhotos.jsx";
 import FilterDrawer from "../../components/FilterDrawer/FilterDrawer.jsx";
 import FilterButton from "../../components/FilterButton/FilterButton.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
+// import Footer from "../../components/Footer/Footer.jsx";
 import Filter from "../../components/Filter/Filter.jsx";
 import Tag from "../../components/Tag/Tag.jsx";
 // import photos from "../../data/photos.json";
@@ -51,7 +51,7 @@ function HomePage() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

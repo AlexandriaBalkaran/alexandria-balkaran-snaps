@@ -1,0 +1,20 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.header-comments__container {
+  background-color: $colorprimarypistachio;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.home__button {
+  text-decoration: none;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+}

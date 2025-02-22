@@ -1,19 +1,52 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
-input {
-    width: 90%;
+form {
+    margin: 0 1rem;
+}
+.input-name , .input-comment  {
+    min-width: 17.5rem;
+    height: 1.875rem;
+    padding: .5rem;
+    border-radius: 10%;
+
+    @include tablet {
+        min-height: 2.5rem;
+        padding: .5rem 1rem;
+    }
 }
 .form {
     &__name , &__comment {
         border-style: none;
         outline: none;
-        border:2px solid $colorsecondarysage;
+        margin-top: .5rem;
+        // width: 90%;
+        border:2px solid $colorsecondarysea;
         &:focus {
             border:2px solid $colorprimaryforest;
         }
         &--invalid {
-            border:2px solid #B10606
+            border:2px solid #B10606;
         }
+    
+    }
+    &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    }
+}
+.submit {
+    &__container {
+    // width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    }
+    &__button {
+    background-color: $colorprimaryforest;
+    color: $colorsecondarywhite;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
     }
 }
