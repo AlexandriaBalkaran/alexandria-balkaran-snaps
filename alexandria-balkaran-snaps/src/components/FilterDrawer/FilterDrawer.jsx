@@ -2,8 +2,11 @@ import React from "react";
 import Tag from "../Tag/Tag";
 import "./FilterDrawer.scss";
 // import tags from "../../data/tags.json";
+import axios from "axios";
+import { useState , useEffect } from "react";
 
-function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag, tags }) {
+function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
+  const [tags, setTags] = useState([]);
   const handleTagClick = (tag) => {
     if (selectedTag === tag) {
       setSelectedTag(null);
@@ -11,6 +14,21 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag, tags }) {
       setSelectedTag(tag);
     }
   };
+
+   useEffect(() => {
+      fetchTags();
+    }, []);
+
+  async function fetchTags() {
+    try {
+      const { data } = await axios.get(
+        `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
+      );
+      setTags(data);
+    } catch (error) {
+      console.error("Error fetching tags:", error);
+    }
+  }
 
   return (
     <div className={`filter__content ${drawerOpen ? "drawer-open" : ""}`}>
@@ -30,10 +48,10 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag, tags }) {
             </li>
           ))} */}
             <ul className="filter__list">
-          {tags && tags.map((tag) => (
+          {tags.map((tag) => (
             <li key={tag}>
               <Tag
-                tag={photo.tag}
+                tag={tag}
                 isClickable={true}
                 drawerOpen={drawerOpen} 
                 selectedTag={selectedTag}
