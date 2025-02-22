@@ -42,11 +42,13 @@ function CommentsPage() {
   return (
     <>
     <HeaderCommentsPage/>
-    <CommentsPhotoCard photo={photo} formatDate={formatDate}/>
-      <div>
+    <div className="comments-photocard__container-desktop">
+      <CommentsPhotoCard photo={photo} formatDate={formatDate}/>
+    </div>
+      <div className="comments-form__container-desktop">
           <CommentForm commentsURL={commentsURL} fetchComments={fetchComments}/>
       </div>
-      <div>
+      <div className="comments-display__container-desktop">
         <CommentsDisplay comments={comments} />
       </div>
     </>

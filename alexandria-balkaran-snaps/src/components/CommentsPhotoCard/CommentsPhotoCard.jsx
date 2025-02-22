@@ -1,6 +1,5 @@
 import React from "react";
 import "./CommentsPhotoCard.scss";
-
 import Tag from "../../components/Tag/Tag";
 
 function CommentsPhotoCard({ photo, formatDate }) {
@@ -12,9 +11,9 @@ function CommentsPhotoCard({ photo, formatDate }) {
           src={photo.photo}
           alt={photo.photoDescription}
         />
-        <div className="tags-container">
+        <div className="tags__container">
           {photo.tags.map((tag) => (
-            <Tag tag={tag} key={tag} />
+            <Tag tag={tag} key={tag} size="large"/>
           ))}
         </div>
         <div className="photo-section__text">
@@ -24,7 +23,6 @@ function CommentsPhotoCard({ photo, formatDate }) {
                 src="../src/assets/images/Like_Outline.svg"
                 alt="heart outline of image"
               />
-              {/* {" "} */}
               {photo.likes} likes
             </p>
             <p className="photo-section__tablet--appear">Photo by {photo.photographer}</p>

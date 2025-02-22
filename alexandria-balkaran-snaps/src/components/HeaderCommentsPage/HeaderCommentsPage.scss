@@ -7,6 +7,9 @@
   padding: 1.5rem 1rem;
   position: absolute;
   top: 0;
+  @include tablet {
+    padding: 1.5rem;
+  }
 }
 header {
   position: fixed;
@@ -20,6 +23,9 @@ header {
     text-decoration: none;
     color: $colorprimaryforest;
     @include fontmobile-heading;
+    @include tablet {
+      @include fonttablet-heading;
+    }
   }
   &-img {
     padding-right: .5rem;

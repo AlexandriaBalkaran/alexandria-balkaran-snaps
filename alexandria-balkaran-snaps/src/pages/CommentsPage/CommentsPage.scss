@@ -1,2 +1,8 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
+
+.comments-display__container-desktop , .comments-form__container-desktop , .comments-photocard__container-desktop {
+  @include desktop {
+    padding: 0 15%;
+  }
+}
