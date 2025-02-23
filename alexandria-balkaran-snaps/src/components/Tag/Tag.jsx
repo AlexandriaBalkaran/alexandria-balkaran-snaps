@@ -1,12 +1,13 @@
 import React from "react";
 import "./Tag.scss";
 
-function Tag({ tag, isClickable = false, selectedTag, onClick }) {
+function Tag({ tag, isClickable = false, selectedTag, onClick, isCommentsPage = false }) {
   return (
     <button
       className={`tag 
         ${isClickable ? "tag--clickable" : ""} 
-        ${selectedTag === tag ? "tag--selected" : ""}`}
+        ${selectedTag === tag ? "tag--selected" : ""}
+        ${isCommentsPage ? "tag--comments-page" : ""}`}
       onClick={() => isClickable && onClick(tag)}
     >
       {tag}
@@ -15,17 +16,3 @@ function Tag({ tag, isClickable = false, selectedTag, onClick }) {
 }
 
 export default Tag;
-
-// function Tag({ tag, isClickable = false, selectedTag, onClick, size = 'default' }) {
-//   return (
-//     <button
-//       className={`tag 
-//         ${isClickable ? "tag--clickable" : ""} 
-//         ${selectedTag === tag ? "tag--selected" : ""}
-//         ${size === 'large' ? "tag--large" : ""}`}
-//       onClick={() => isClickable && onClick(tag)}
-//     >
-//       {tag}
-//     </button>
-//   );
-}

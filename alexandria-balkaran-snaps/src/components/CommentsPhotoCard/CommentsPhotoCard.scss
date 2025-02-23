@@ -9,7 +9,7 @@
       background-color: $colorsecondarysage;
       border: 1px solid $colorsecondarysea;
       margin: 6rem 1rem 1rem 1rem;
-      border-radius: 0.5rem;
+      border-radius: 0.75rem;
       object-fit: cover;
       overflow: hidden;
       position: relative;
@@ -52,16 +52,29 @@
             display: none;
         }
     }
+    &__likes-img {
+        padding-right: .25rem;
+        height: 0.75rem;
+        @include tablet {
+            height: 1.25rem;
+            padding-right: .5rem;
+        }
+    }
   }
 p {
+    display: flex;
+    align-items: center;
     @include fontmobile-body;
     @include tablet {
         @include fonttablet-body;
     }
 }
-// .tag--large {
-//     @include fontmobile-body;
-//     @include tablet {
-//         @include fonttablet-body;
-//     }
-// }
+.tag--comments-page {
+    @include fontmobile-body;
+    @include tablet {
+        @include fonttablet-body;
+    }
+}
+.tags__container {
+    margin-left: .75rem;
+}

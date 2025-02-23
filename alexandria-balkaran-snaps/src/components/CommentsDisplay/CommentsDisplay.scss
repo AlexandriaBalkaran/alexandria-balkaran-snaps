@@ -11,6 +11,11 @@
         margin-bottom: 4rem;
     }
     }
+    &-author , &-date {
+        @include tablet {
+            @include fonttablet-smbody;
+        }
+    }
     &-name-date__container {
         display: flex;
         flex-direction: row;
@@ -18,6 +23,9 @@
         color: $colorprimaryforest;
         border-top: .125rem solid $colorsecondarysea;
         padding-top: 1rem;
+        @include tablet {
+            @include fonttablet-smbody;
+        }
     }
     &-text {
         padding-top: 1rem;

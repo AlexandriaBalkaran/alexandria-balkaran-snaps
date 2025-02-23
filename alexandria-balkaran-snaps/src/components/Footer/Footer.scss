@@ -11,7 +11,15 @@
         padding-bottom: 1.5rem;
     }
   }
+  &__info {
+    @include tablet {
+      @include fonttablet-smbody;
+    }
+  }
   &__text {
+    a {
+      text-decoration: none;
+    }
     @include tablet {
       display: flex;
       justify-content: space-between;
@@ -63,12 +71,15 @@
   &__copyright {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 60%;
     color: $colorsecondarysea;
     @include fontmobile-smbody;
     @include tablet {
-      width: 50%;
+      width: 30%;
       @include fonttablet-smbody;
+    }
+    @include desktop {
+      width: 25%;
     }
   }
   &__div {
@@ -95,7 +106,7 @@
   @include desktop {
     display: flex;
     justify-content: flex-end;
-    padding: 2.5rem 1rem 0 2rem;
+    padding: 2.5rem 1rem 0 6rem;
   }
   & a {
     padding-right: 1rem;

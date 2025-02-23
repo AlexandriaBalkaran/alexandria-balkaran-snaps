@@ -38,12 +38,11 @@
   @include desktop {
     width: 0;
     order: 2;
-    background-color: $colorsecondarysage;
-    width: 25rem;
   }
   &--open {
     @include desktop {
       width: 30%;
+      background-color: $colorsecondarysage;
     }
   }
 }

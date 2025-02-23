@@ -3,10 +3,14 @@ import "./CommentsDisplay.scss";
 
 function CommentsDisplay({ comments }) {
 
-    const formatDate = (timestamp) => {
-        const date = new Date(timestamp);
-        return date.toLocaleDateString(timestamp)
-        };
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    });
+};
     
     const sortedComments = [...comments].sort((a, b) => b.timestamp - a.timestamp);
 
