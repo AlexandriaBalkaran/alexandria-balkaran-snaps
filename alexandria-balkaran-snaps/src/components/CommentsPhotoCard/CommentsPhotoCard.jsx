@@ -3,7 +3,6 @@ import "./CommentsPhotoCard.scss";
 import Tag from "../../components/Tag/Tag";
 
 function CommentsPhotoCard({ photo, formatDate }) {
-
   return (
     <div className="comments-page__container">
       <div className="photo-section">
@@ -14,10 +13,10 @@ function CommentsPhotoCard({ photo, formatDate }) {
         />
         <div className="tags__container">
           {photo.tags.map((tag) => (
-            <Tag 
-              tag={tag} 
-              key={tag} 
-              isCommentsPage={true} 
+            <Tag
+              tag={tag}
+              key={tag}
+              isCommentsPage={true}
               className="comments-page__tags"
             />
           ))}
@@ -25,15 +24,21 @@ function CommentsPhotoCard({ photo, formatDate }) {
         <div className="photo-section__text">
           <div className="photo-section__likes-date-container">
             <p>
-              <img className="photo-section__likes-img"
+              <img
+                className="photo-section__likes-img"
                 src="../src/assets/images/Like_Outline.svg"
-                alt="heart outline of image" 
+                alt="heart outline of image"
               />
-              {photo.likes} likes </p>
-            <p className="photo-section__tablet--appear">Photo by {photo.photographer}</p>
+              {photo.likes} likes{" "}
+            </p>
+            <p className="photo-section__tablet--appear">
+              Photo by {photo.photographer}
+            </p>
             <p>{formatDate(photo.timestamp)}</p>
           </div>
-          <p className="photo-section__mobile--disappear">Photo by {photo.photographer}</p>
+          <p className="photo-section__mobile--disappear">
+            Photo by {photo.photographer}
+          </p>
         </div>
       </div>
     </div>

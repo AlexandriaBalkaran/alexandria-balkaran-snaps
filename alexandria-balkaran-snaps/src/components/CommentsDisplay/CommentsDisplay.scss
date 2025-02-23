@@ -2,35 +2,37 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .comments {
-    &-display__container {
+  &-display__container {
     margin: 0 1rem;
     @include fontmobile-body;
     @include tablet {
-        @include fonttablet-body;
-        padding: 0 1.5rem;
-        margin-bottom: 4rem;
+      @include fonttablet-body;
+      padding: 0 1.5rem;
+      margin-bottom: 4rem;
     }
+  }
+  &-author,
+  &-date {
+    @include tablet {
+      @include fonttablet-smbody;
     }
-    &-author , &-date {
-        @include tablet {
-            @include fonttablet-smbody;
-        }
+  }
+  &-name-date__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $colorprimaryforest;
+    border-top: 0.125rem solid $colorsecondarysea;
+    padding-top: 1rem;
+    @include tablet {
+      @include fonttablet-smbody;
     }
-    &-name-date__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: $colorprimaryforest;
-        border-top: .125rem solid $colorsecondarysea;
-        padding-top: 1rem;
-        @include tablet {
-            @include fonttablet-smbody;
-        }
-    }
-    &-text {
-        padding-top: 1rem;
-    }
-    &__title , &-text {
-        padding-bottom: 1rem;
-    }
+  }
+  &-text {
+    padding-top: 1rem;
+  }
+  &__title,
+  &-text {
+    padding-bottom: 1rem;
+  }
 }

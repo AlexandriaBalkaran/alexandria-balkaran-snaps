@@ -3,7 +3,7 @@ import Tag from "../Tag/Tag";
 import "./FilterDrawer.scss";
 // import tags from "../../data/tags.json";
 import axios from "axios";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
   const [tags, setTags] = useState([]);
@@ -15,9 +15,9 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
     }
   };
 
-   useEffect(() => {
-      fetchTags();
-    }, []);
+  useEffect(() => {
+    fetchTags();
+  }, []);
 
   async function fetchTags() {
     try {
@@ -47,13 +47,13 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
               />
             </li>
           ))} */}
-            <ul className="filter__list">
+        <ul className="filter__list">
           {tags.map((tag) => (
             <li key={tag}>
               <Tag
                 tag={tag}
                 isClickable={true}
-                drawerOpen={drawerOpen} 
+                drawerOpen={drawerOpen}
                 selectedTag={selectedTag}
                 setSelectedTag={setSelectedTag}
                 onClick={() => handleTagClick(tag)}

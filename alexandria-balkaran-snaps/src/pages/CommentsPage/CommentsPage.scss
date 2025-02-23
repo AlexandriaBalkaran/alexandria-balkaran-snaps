@@ -1,7 +1,9 @@
 @use "/src/styles/partials/_mixins.scss" as *;
 @use "/src/styles/partials/_variables.scss" as *;
 
-.comments-display__container-desktop , .comments-form__container-desktop , .comments-photocard__container-desktop {
+.comments-display__container-desktop,
+.comments-form__container-desktop,
+.comments-photocard__container-desktop {
   margin-top: 2.5rem;
   @include tablet {
     margin-top: 3.5rem;
@@ -11,7 +13,7 @@
   }
 }
 .comments-photocard__container-desktop {
-    @include tablet {
-      margin-top: 8.5rem;
-    }
+  @include tablet {
+    margin-top: 8.5rem;
   }
+}

@@ -1,7 +1,13 @@
 import React from "react";
 import "./Tag.scss";
 
-function Tag({ tag, isClickable = false, selectedTag, onClick, isCommentsPage = false }) {
+function Tag({
+  tag,
+  isClickable = false,
+  selectedTag,
+  onClick,
+  isCommentsPage = false,
+}) {
   return (
     <button
       className={`tag 

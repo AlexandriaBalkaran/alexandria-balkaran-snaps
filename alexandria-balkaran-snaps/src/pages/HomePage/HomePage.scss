@@ -3,8 +3,8 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .header__container {
-    display: flex;
-  }
+  display: flex;
+}
 .filter__button {
   display: flex;
 }
@@ -30,7 +30,7 @@
   @include desktop {
     display: flex;
     flex-grow: 1;
-    margin-top: 160px; 
+    margin-top: 160px;
   }
 }
 

@@ -2,79 +2,79 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .comments-page {
-    &__image {
-      width: 100%;
-    }
-    &__container {
-      background-color: $colorsecondarysage;
-      border: 1px solid $colorsecondarysea;
-      margin: 6rem 1rem 1rem 1rem;
-      border-radius: 0.75rem;
-      object-fit: cover;
-      overflow: hidden;
-      position: relative;
-  
-      @include tablet {
-        margin: 7rem 1.5rem 1rem 1.5rem;;
-      }
-      @include desktop {
-        border-radius: 0.75rem;
-      }
-  
-      &--width {
-        @include tablet {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-          justify-content: space-evenly;
-        }
-      }
-    }
+  &__image {
+    width: 100%;
   }
-.photo-section {
-    &__text {
-        padding: 1rem;
-    }
-    &__likes-date-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 1rem;
-    }
-    &__tablet--appear {
-        display: none;
-        @include tablet {
-            display: revert;
-        }
-    }
-    &__mobile--disappear {
-        @include tablet {
-            display: none;
-        }
-    }
-    &__likes-img {
-        padding-right: .25rem;
-        height: 0.75rem;
-        @include tablet {
-            height: 1.25rem;
-            padding-right: .5rem;
-        }
-    }
-  }
-p {
-    display: flex;
-    align-items: center;
-    @include fontmobile-body;
+  &__container {
+    background-color: $colorsecondarysage;
+    border: 1px solid $colorsecondarysea;
+    margin: 6rem 1rem 1rem 1rem;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+
     @include tablet {
-        @include fonttablet-body;
+      margin: 7rem 1.5rem 1rem 1.5rem;
     }
+    @include desktop {
+      border-radius: 0.75rem;
+    }
+
+    &--width {
+      @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+.photo-section {
+  &__text {
+    padding: 1rem;
+  }
+  &__likes-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  &__tablet--appear {
+    display: none;
+    @include tablet {
+      display: revert;
+    }
+  }
+  &__mobile--disappear {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__likes-img {
+    padding-right: 0.25rem;
+    height: 0.75rem;
+    @include tablet {
+      height: 1.25rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+p {
+  display: flex;
+  align-items: center;
+  @include fontmobile-body;
+  @include tablet {
+    @include fonttablet-body;
+  }
 }
 .tag--comments-page {
-    @include fontmobile-body;
-    @include tablet {
-        @include fonttablet-body;
-    }
+  @include fontmobile-body;
+  @include tablet {
+    @include fonttablet-body;
+  }
 }
 .tags__container {
-    margin-left: .75rem;
+  margin-left: 0.75rem;
 }
