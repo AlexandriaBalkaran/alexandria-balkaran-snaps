@@ -1,11 +1,14 @@
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer__container">
       <div className="footer__text-icons">
         <div className="footer__text">
-          <h1 className="footer__title">Snaps</h1>
+          <Link to="/">
+            <h1 className="footer__title">Snaps</h1>
+          </Link>
           <div className="footer__link">
             <div className="footer__link-one--space">
               <a className="footer__link--underline" href="">
@@ -35,25 +38,25 @@ const Footer = () => {
         <div className="social__icons">
           <a href="https://www.facebook.com/">
             <img
-              src="./src/assets/images/Facebook.svg"
+              src="../src/assets/images/Facebook.svg"
               alt="facebook icon"
             ></img>
           </a>
           <a href="https://x.com/?lang=en">
             <img
-              src="./src/assets/images/X_twitter.svg"
+              src="../src/assets/images/X_twitter.svg"
               alt="twitter icon"
             ></img>
           </a>
           <a href="https://www.instagram.com/">
             <img
-              src="./src/assets/images/Instagram.svg"
+              src="../src/assets/images/Instagram.svg"
               alt="instagram icon"
             ></img>
           </a>
           <a href="https://www.pinterest.com/">
             <img
-              src="./src/assets/images/Pinterest.svg"
+              src="../src/assets/images/Pinterest.svg"
               alt="pinterest icon"
             ></img>
           </a>

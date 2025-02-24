@@ -7,6 +7,10 @@
   padding: 0.375rem 0.5rem;
   border-radius: 0.375rem;
   margin: 0.5rem;
+  &:hover {
+    background-color: $colorsecondarysea;
+  }
+  cursor: pointer;
   @include fontmobile-label;
 
   @include tablet {

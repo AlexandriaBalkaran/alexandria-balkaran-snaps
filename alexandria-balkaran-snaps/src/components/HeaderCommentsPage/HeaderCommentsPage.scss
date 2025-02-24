@@ -1,0 +1,37 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.header-comments__container {
+  background-color: $colorprimarypistachio;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  position: absolute;
+  top: 0;
+  @include tablet {
+    padding: 1.5rem;
+  }
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.home__button {
+  text-decoration: none;
+  cursor: pointer;
+  &-text {
+    text-decoration: none;
+    color: $colorprimaryforest;
+    @include fontmobile-heading;
+    @include tablet {
+      @include fonttablet-heading;
+    }
+  }
+  &-img {
+    padding-right: 0.5rem;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
