@@ -11,10 +11,10 @@
 }
 
 body {
-  background-color: $colorprimarypistachio;
+  background-color: $color-primary-pistachio;
 }
 h1 {
-  color: $colorprimaryblack;
+  color: $color-primary-black;
   @include fontmobile-wordmark;
   @include tablet {
     @include fonttablet-wordmark;

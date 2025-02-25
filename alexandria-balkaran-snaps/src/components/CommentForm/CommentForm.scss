@@ -18,9 +18,9 @@ form {
     min-height: 1.875rem;
     padding: 0.5rem;
     @include fontmobile-body;
-    border: 2px solid $colorsecondarysea;
+    border: 2px solid $color-secondary-sea;
     &:focus {
-      border: 2px solid $colorprimaryforest;
+      border: 2px solid $color-primary-forest;
     }
     &--invalid {
       border: 2px solid #b10606;
@@ -55,8 +55,8 @@ form {
     justify-content: flex-end;
   }
   &__button {
-    background-color: $colorprimaryforest;
-    color: $colorsecondarywhite;
+    background-color: $color-primary-forest;
+    color: $color-secondary-white;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;

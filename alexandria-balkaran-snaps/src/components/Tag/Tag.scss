@@ -2,13 +2,13 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .tag {
-  background-color: $colorsecondarywhite;
-  border: 1px solid $colorsecondarysea;
+  background-color: $color-secondary-white;
+  border: 1px solid $color-secondary-sea;
   padding: 0.375rem 0.5rem;
   border-radius: 0.375rem;
   margin: 0.5rem;
   &:hover {
-    background-color: $colorsecondarysea;
+    background-color: $color-secondary-sea;
   }
   cursor: pointer;
   @include fontmobile-label;
@@ -21,14 +21,14 @@
   }
 
   &--clickable {
-    border-color: $colorprimaryforest;
-    color: $colorprimaryforest;
+    border-color: $color-primary-forest;
+    color: $color-primary-forest;
     cursor: pointer;
 
     &:hover,
     &.tag--selected {
-      background-color: $colorprimaryforest;
-      color: $colorsecondarywhite;
+      background-color: $color-primary-forest;
+      color: $color-secondary-white;
     }
   }
 }

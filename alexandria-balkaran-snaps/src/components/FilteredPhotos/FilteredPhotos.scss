@@ -7,8 +7,8 @@
   }
 
   &__container {
-    background-color: $colorsecondarysage;
-    border: 1px solid $colorsecondarysea;
+    background-color: $color-secondary-sage;
+    border: 1px solid $color-secondary-sea;
     margin: 1rem;
     border-radius: 0.5rem;
     object-fit: cover;
@@ -38,7 +38,8 @@
   }
 
   &__photographer {
-    background-color: $colorsecondarysage;
+    background-color: $color-secondary-sage;
+    color: $color-primary-black;
     position: absolute;
     border-top-left-radius: 0.625rem;
     padding: 0.2rem;
