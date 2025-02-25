@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    background-color: $color-secondary-sage;
+    background-color: $color-secondary-background;
     padding: 1rem;
     @include tablet {
       padding: 2rem 1rem 4rem 1rem;
@@ -20,7 +20,7 @@
   }
 
   &__title {
-    background-color: $color-secondary-sage;
+    background-color: $color-secondary-background;
     margin-top: 5rem;
     padding: 1rem;
     @include font-mobile-heading;
@@ -32,4 +32,7 @@
       width: 30%;
     }
   }
+}
+.tag--clickable {
+  margin: 0.5rem 0.5rem 0 0;
 }

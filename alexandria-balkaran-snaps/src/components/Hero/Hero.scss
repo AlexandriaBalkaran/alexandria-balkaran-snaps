@@ -3,6 +3,9 @@
 
 .hero__section {
   padding: 3rem 1rem;
+  @include tablet {
+    padding: 3rem 1.5rem;
+  }
   & p {
     @include font-mobile-body;
     padding-bottom: 1rem;

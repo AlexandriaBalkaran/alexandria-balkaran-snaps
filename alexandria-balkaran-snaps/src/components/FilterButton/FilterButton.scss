@@ -6,9 +6,9 @@
     padding: 0.5rem 1rem;
     width: 6rem;
     border-radius: 1rem;
-    background-color: $color-primary-pistachio;
-    border: 0.125rem solid $color-primary-forest;
-    color: $color-primary-forest;
+    background-color: $color-primary-background;
+    border: 0.125rem solid $color-primary-outline;
+    color: $color-primary-outline;
     transition: all 0.2s ease;
     position: fixed;
     display: flex;
@@ -28,8 +28,8 @@
     &:hover,
     &.active {
       cursor: pointer;
-      background-color: $color-primary-forest;
-      color: $color-secondary-white;
+      background-color: $color-primary-outline;
+      color: $color-secondary-tag-background;
 
       .filter__image {
         filter: brightness(0) invert(1);

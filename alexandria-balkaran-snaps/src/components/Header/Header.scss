@@ -2,9 +2,12 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .header__container {
-  background-color: $color-primary-pistachio;
+  background-color: $color-primary-background;
   width: 100%;
   padding: 1.5rem 1rem;
+  @include tablet {
+    padding: 1.5rem 1.5rem;
+  }
 }
 header {
   position: fixed;

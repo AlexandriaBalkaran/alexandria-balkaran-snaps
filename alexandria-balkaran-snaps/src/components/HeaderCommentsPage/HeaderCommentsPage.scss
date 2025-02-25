@@ -2,7 +2,7 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .header-comments__container {
-  background-color: $color-primary-pistachio;
+  background-color: $color-primary-background;
   width: 100%;
   padding: 1.5rem 1rem;
   position: absolute;
@@ -21,7 +21,7 @@ header {
   cursor: pointer;
   &-text {
     text-decoration: none;
-    color: $color-primary-forest;
+    color: $color-primary-outline;
     @include font-mobile-heading;
     @include tablet {
       @include font-tablet-heading;

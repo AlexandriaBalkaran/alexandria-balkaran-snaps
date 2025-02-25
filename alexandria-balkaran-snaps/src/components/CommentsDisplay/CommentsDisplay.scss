@@ -21,8 +21,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: $color-primary-forest;
-    border-top: 0.125rem solid $color-secondary-sea;
+    color: $color-primary-outline;
+    border-top: 0.125rem solid $color-secondary-border;
     padding-top: 1rem;
     @include tablet {
       @include font-tablet-sm-body;
