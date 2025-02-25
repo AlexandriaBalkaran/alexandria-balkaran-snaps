@@ -17,7 +17,7 @@ form {
     min-width: 17.5rem;
     min-height: 1.875rem;
     padding: 0.5rem;
-    @include fontmobile-body;
+    @include font-mobile-body;
     border: 2px solid $color-secondary-sea;
     &:focus {
       border: 2px solid $color-primary-forest;
@@ -28,7 +28,7 @@ form {
     @include tablet {
       min-height: 2.5rem;
       padding: 0.5rem 1rem;
-      @include fonttablet-body;
+      @include font-tablet-body;
     }
   }
   &__comment {
@@ -43,9 +43,9 @@ form {
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
-    @include fontmobile-body;
+    @include font-mobile-body;
     @include tablet {
-      @include fonttablet-body;
+      @include font-tablet-body;
     }
   }
 }
@@ -62,9 +62,9 @@ form {
     border-radius: 0.5rem;
     width: 5rem;
     cursor: pointer;
-    @include fontmobile-body;
+    @include font-mobile-body;
     @include tablet {
-      @include fonttablet-body;
+      @include font-tablet-body;
       width: 9rem;
       border-radius: 0.75rem;
     }

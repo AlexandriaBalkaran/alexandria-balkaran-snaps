@@ -12,75 +12,75 @@
   }
 }
 // Mobile Fonts
-@mixin fontmobile-wordmark {
+@mixin font-mobile-wordmark {
   font-family: "Newsreader";
   font-size: 2rem;
   line-height: 2rem;
   font-weight: 400;
 }
-@mixin fontmobile-title {
+@mixin font-mobile-title {
   font-family: "Newsreader";
   font-size: 1.625rem;
   line-height: 2.375rem;
   font-weight: 300;
   font-style: normal;
 }
-@mixin fontmobile-heading {
+@mixin font-mobile-heading {
   font-family: "Outfit";
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 500;
 }
-@mixin fontmobile-body {
+@mixin font-mobile-body {
   font-family: "Outfit";
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: 500;
 }
-@mixin fontmobile-smbody {
+@mixin font-mobile-sm-body {
   font-family: "Outfit";
   font-size: 0.625rem;
   line-height: 0.75rem;
   font-weight: 500;
 }
-@mixin fontmobile-label {
+@mixin font-mobile-label {
   font-family: "Outfit";
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: 500;
 }
 // DeskTop and Tablet Fonts
-@mixin fonttablet-wordmark {
+@mixin font-tablet-wordmark {
   font-family: "Newsreader";
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-weight: 400;
 }
-@mixin fonttablet-title {
+@mixin font-tablet-title {
   font-family: "Newsreader";
   font-size: 3.25rem;
   line-height: 4.125rem;
   font-weight: 300;
 }
-@mixin fonttablet-heading {
+@mixin font-tablet-heading {
   font-family: "Outfit";
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 500;
 }
-@mixin fonttablet-body {
+@mixin font-tablet-body {
   font-family: "Outfit";
   font-size: 1.25rem;
   line-height: 1.8125rem;
   font-weight: 500;
 }
-@mixin fonttablet-smbody {
+@mixin font-tablet-sm-body {
   font-family: "Outfit";
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: 500;
 }
-@mixin fonttablet-label {
+@mixin font-tablet-label {
   font-family: "Outfit";
   font-size: 0.875rem;
   line-height: 1.0938rem;

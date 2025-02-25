@@ -4,20 +4,20 @@
 .hero__section {
   padding: 3rem 1rem;
   & p {
-    @include fontmobile-body;
+    @include font-mobile-body;
     padding-bottom: 1rem;
     padding-top: 4rem;
     @include tablet {
-      @include fonttablet-body;
+      @include font-tablet-body;
     }
   }
   & span {
     font-style: italic;
   }
   & h2 {
-    @include fontmobile-title;
+    @include font-mobile-title;
     @include tablet {
-      @include fonttablet-title;
+      @include font-tablet-title;
     }
   }
 }

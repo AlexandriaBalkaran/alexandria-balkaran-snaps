@@ -22,9 +22,9 @@ header {
   &-text {
     text-decoration: none;
     color: $color-primary-forest;
-    @include fontmobile-heading;
+    @include font-mobile-heading;
     @include tablet {
-      @include fonttablet-heading;
+      @include font-tablet-heading;
     }
   }
   &-img {

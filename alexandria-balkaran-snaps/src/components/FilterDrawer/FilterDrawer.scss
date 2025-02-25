@@ -23,10 +23,10 @@
     background-color: $color-secondary-sage;
     margin-top: 5rem;
     padding: 1rem;
-    @include fontmobile-heading;
+    @include font-mobile-heading;
     padding: 2rem 1rem 1rem 1rem;
     @include tablet {
-      @include fonttablet-heading;
+      @include font-tablet-heading;
     }
     @include desktop {
       width: 30%;

@@ -64,15 +64,15 @@
 p {
   display: flex;
   align-items: center;
-  @include fontmobile-body;
+  @include font-mobile-body;
   @include tablet {
-    @include fonttablet-body;
+    @include font-tablet-body;
   }
 }
 .tag--comments-page {
-  @include fontmobile-body;
+  @include font-mobile-body;
   @include tablet {
-    @include fonttablet-body;
+    @include font-tablet-body;
   }
 }
 .tags__container {

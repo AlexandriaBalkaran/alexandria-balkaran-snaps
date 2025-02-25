@@ -11,13 +11,13 @@
     background-color: $color-secondary-sea;
   }
   cursor: pointer;
-  @include fontmobile-label;
+  @include font-mobile-label;
 
   @include tablet {
     padding: 0.5rem 0.5rem;
     border-radius: 0.75rem;
     margin: 0.75rem;
-    @include fonttablet-label;
+    @include font-tablet-label;
   }
 
   &--clickable {

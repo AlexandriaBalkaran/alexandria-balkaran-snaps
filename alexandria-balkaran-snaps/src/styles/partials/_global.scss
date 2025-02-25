@@ -15,9 +15,9 @@ body {
 }
 h1 {
   color: $color-primary-black;
-  @include fontmobile-wordmark;
+  @include font-mobile-wordmark;
   @include tablet {
-    @include fonttablet-wordmark;
+    @include font-tablet-wordmark;
   }
 }
 nav a {

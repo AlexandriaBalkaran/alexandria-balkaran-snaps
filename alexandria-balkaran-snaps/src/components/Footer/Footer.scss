@@ -13,7 +13,7 @@
   }
   &__info {
     @include tablet {
-      @include fonttablet-smbody;
+      @include font-tablet-sm-body;
     }
   }
   &__text {
@@ -63,9 +63,9 @@
     text-decoration: none;
     color: $color-primary-black;
     padding: 0.2rem;
-    @include fontmobile-body;
+    @include font-mobile-body;
     @include tablet {
-      @include fonttablet-body;
+      @include font-tablet-body;
     }
   }
   &__copyright {
@@ -73,10 +73,10 @@
     justify-content: space-between;
     width: 60%;
     color: $color-secondary-sea;
-    @include fontmobile-smbody;
+    @include font-mobile-sm-body;
     @include tablet {
       width: 30%;
-      @include fonttablet-smbody;
+      @include font-tablet-sm-body;
     }
     @include desktop {
       width: 25%;

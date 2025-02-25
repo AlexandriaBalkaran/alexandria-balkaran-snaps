@@ -45,9 +45,9 @@
     padding: 0.2rem;
     right: 0;
     bottom: 3rem;
-    @include fontmobile-label;
+    @include font-mobile-label;
     @include tablet {
-      @include fonttablet-label;
+      @include font-tablet-label;
       bottom: 4rem;
     }
   }
