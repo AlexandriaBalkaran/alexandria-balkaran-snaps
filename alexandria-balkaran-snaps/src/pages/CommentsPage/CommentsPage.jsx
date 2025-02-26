@@ -57,7 +57,7 @@ function CommentsPage() {
         <CommentsPhotoCard photo={photo} formatDate={formatDate} />
       </div>
       <div className="comments-form__container-desktop">
-        <CommentForm commentsURL={(`http://localhost:8080/photos/${id}/comments`)} fetchComments={fetchComments} />
+        <CommentForm commentsURL={(`http://localhost:8080/photos/${id}/comments`)} fetchComments={fetchComments} id={id} />
       </div>
       <div className="comments-display__container-desktop">
         <CommentsDisplay comments={comments} />

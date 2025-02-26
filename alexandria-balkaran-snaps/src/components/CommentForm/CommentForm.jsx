@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./CommentForm.scss";
 import axios from "axios";
 
-function CommentForm({ fetchComments, commentsURL }) {
+function CommentForm({ fetchComments , id }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [error, setError] = useState(false);
