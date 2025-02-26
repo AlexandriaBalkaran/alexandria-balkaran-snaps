@@ -24,7 +24,7 @@ function CommentForm({ fetchComments, commentsURL }) {
     }
 
     try {
-      await axios.post(commentsURL, { name, comment });
+      await axios.post((`http://localhost:8080/photos/${id}/comments`), { name, comment });
       
       fetchComments();
 

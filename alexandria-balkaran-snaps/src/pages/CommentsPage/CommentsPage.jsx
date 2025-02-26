@@ -11,7 +11,6 @@ function CommentsPage() {
   const { id } = useParams();
   const [photo, setPhoto] = useState(null);
   const [comments, setComments] = useState([]);
-  const commentsURL = `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`;
 
   const formatDate = (timestamp) => {
     const date = new Date(timestamp);
@@ -29,9 +28,8 @@ function CommentsPage() {
 
   async function fetchPhoto() {
     try {
-      const { data } = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
-      );
+      const { data } = await axios.get
+      (`http://localhost:8080/photos/${id}`);
       setPhoto(data);
     } catch (error) {
       console.error("Error fetching photo:", error);
@@ -40,7 +38,8 @@ function CommentsPage() {
   
   async function fetchComments() {
     try {
-      const { data } = await axios.get(commentsURL);
+      const { data } = await axios.get
+      (`http://localhost:8080/photos/${id}/comments`);
       setComments(data);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -58,7 +57,7 @@ function CommentsPage() {
         <CommentsPhotoCard photo={photo} formatDate={formatDate} />
       </div>
       <div className="comments-form__container-desktop">
-        <CommentForm commentsURL={commentsURL} fetchComments={fetchComments} />
+        <CommentForm commentsURL={(`http://localhost:8080/photos/${id}/comments`)} fetchComments={fetchComments} />
       </div>
       <div className="comments-display__container-desktop">
         <CommentsDisplay comments={comments} />

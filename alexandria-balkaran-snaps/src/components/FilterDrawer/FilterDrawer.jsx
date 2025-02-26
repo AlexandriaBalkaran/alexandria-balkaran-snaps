@@ -21,9 +21,8 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
 
   async function fetchTags() {
     try {
-      const { data } = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
-      );
+      const { data } = await axios.get
+      (`http://localhost:8080/tags`)
       setTags(data);
     } catch (error) {
       console.error("Error fetching tags:", error);

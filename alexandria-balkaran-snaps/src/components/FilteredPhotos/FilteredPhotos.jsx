@@ -13,9 +13,8 @@ function FilteredPhotos() {
 
   async function fetchPhotos() {
     try {
-      const { data } = await axios.get(
-        "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=09e18504-4f04-4e40-b721-d3462e1162a8"
-      );
+      const { data } = await axios.get
+        (`http://localhost:8080/photos/`);
       setFilteredPhotos(data);
     } catch (error) {
       console.error("Error fetching photos:", error);
@@ -40,7 +39,7 @@ function PhotoCard({ photo }) {
         <img
           className="card__image"
           src={photo.photo}
-          alt={photo.photographer}
+          alt={photo.photoDescription}
         />
         <h4 className="card__photographer">{photo.photographer}</h4>
         {photo.tags.map((tag) => (
