@@ -4,10 +4,7 @@ import Hero from "../../components/Hero/Hero";
 import FilteredPhotos from "../../components/FilteredPhotos/FilteredPhotos.jsx";
 import FilterDrawer from "../../components/FilterDrawer/FilterDrawer.jsx";
 import FilterButton from "../../components/FilterButton/FilterButton.jsx";
-import Filter from "../../components/Filter/Filter.jsx";
-import Tag from "../../components/Tag/Tag.jsx";
 import "./Homepage.scss";
-import axios from "axios";
 
 function HomePage() {
   const [selectedTag, setSelectedTag] = useState(null);

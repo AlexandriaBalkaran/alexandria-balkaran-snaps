@@ -15,21 +15,22 @@
     background-color: $color-secondary-background;
     padding: 1rem;
     @include tablet {
-      padding: 2rem 1rem 4rem 1rem;
+      padding: 2rem 1.5rem 4rem 1.5rem;
     }
   }
 
   &__title {
     background-color: $color-secondary-background;
     margin-top: 5rem;
-    padding: 1rem;
-    @include font-mobile-heading;
     padding: 2rem 1rem 1rem 1rem;
+    @include font-mobile-heading;
     @include tablet {
       @include font-tablet-heading;
+      padding: 2rem 1.5rem 1rem 1.5rem;
     }
     @include desktop {
       width: 30%;
+      margin-top: 0;
     }
   }
 }

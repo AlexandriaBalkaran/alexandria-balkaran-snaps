@@ -1,7 +1,6 @@
 import React from "react";
 import Tag from "../Tag/Tag";
 import "./FilterDrawer.scss";
-// import tags from "../../data/tags.json";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
