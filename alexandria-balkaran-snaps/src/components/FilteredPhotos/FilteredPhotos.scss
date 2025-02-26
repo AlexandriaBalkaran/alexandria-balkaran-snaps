@@ -7,13 +7,14 @@
   }
   &__link {
     display: flex;
-    // @include tablet {
-    //   display: inline-block;
-    //   width: 50%;
-    // }
-    // @include desktop {
-    //   display: flex;
-    // }
+    @include tablet {
+      display: inline-block;
+      width: 50%;
+    }
+    @include desktop {
+      display: flex;
+      width: 30.33%;
+    }
   }
 
   &__container {
@@ -25,11 +26,7 @@
     overflow: hidden;
     position: relative;
 
-    @include tablet {
-      width: 45%;
-    }
     @include desktop {
-      width: 24rem;
       border-radius: 0.75rem;
       & .drawer--open {
         width: 50%;

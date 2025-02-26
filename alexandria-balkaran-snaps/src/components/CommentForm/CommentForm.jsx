@@ -23,16 +23,14 @@ function CommentForm({ fetchComments, commentsURL }) {
       return;
     }
 
-    console.log("submit", name, comment);
-
     try {
-      const response = await axios.post(commentsURL, { name, comment });
+      await axios.post(commentsURL, { name, comment });
+      
       fetchComments();
 
       setName("");
       setComment("");
       setError(false);
-      return response;
     } catch (e) {
       console.error(e);
     }

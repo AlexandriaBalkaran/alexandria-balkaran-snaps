@@ -28,14 +28,23 @@ function CommentsPage() {
   }, [id]);
 
   async function fetchPhoto() {
-    const { data } = await axios.get(
-      `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
-    );
-    setPhoto(data);
+    try {
+      const { data } = await axios.get(
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}?api_key=09e18504-4f04-4e40-b721-d3462e1162a8`
+      );
+      setPhoto(data);
+    } catch (error) {
+      console.error("Error fetching photo:", error);
+    }
   }
+  
   async function fetchComments() {
-    const { data } = await axios.get(commentsURL);
-    setComments(data);
+    try {
+      const { data } = await axios.get(commentsURL);
+      setComments(data);
+    } catch (error) {
+      console.error("Error fetching comments:", error);
+    }
   }
 
   if (!photo) {
