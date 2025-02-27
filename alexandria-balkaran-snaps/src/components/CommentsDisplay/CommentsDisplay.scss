@@ -22,9 +22,10 @@
     flex-direction: row;
     justify-content: space-between;
     color: $color-primary-outline;
-    border-top: 0.125rem solid $color-secondary-border;
+    border-top: 1px solid $color-secondary-border;
     padding-top: 1rem;
     @include tablet {
+      border-top: 1.5px solid $color-secondary-border;
       @include font-tablet-sm-body;
     }
   }

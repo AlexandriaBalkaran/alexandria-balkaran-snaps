@@ -14,6 +14,13 @@
     @include desktop {
       display: flex;
       width: 30.33%;
+    //   & .drawer--open {
+    //     width: 0;
+    //   }
+        & .drawer--open {
+        width: 50%;
+        min-width: 25rem;
+      }
     }
   }
 
@@ -28,10 +35,10 @@
 
     @include desktop {
       border-radius: 0.75rem;
-      & .drawer--open {
-        width: 50%;
-        min-width: 25rem;
-      }
+    //   & .drawer--open {
+    //     width: 50%;
+    //     min-width: 25rem;
+    //   }
     }
   }
   &__photographer {

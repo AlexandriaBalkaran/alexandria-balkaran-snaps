@@ -17,8 +17,8 @@ form {
     min-width: 17.5rem;
     min-height: 1.875rem;
     padding: 0.5rem;
+    border: 1px solid $color-secondary-border;
     @include font-mobile-body;
-    border: 2px solid $color-secondary-border;
     &:focus {
       border: 2px solid $color-primary-outline;
     }
@@ -28,6 +28,7 @@ form {
     @include tablet {
       min-height: 2.5rem;
       padding: 0.5rem 1rem;
+      border: 2px solid $color-secondary-border;
       @include font-tablet-body;
     }
   }
