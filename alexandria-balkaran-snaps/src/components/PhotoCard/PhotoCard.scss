@@ -1,0 +1,52 @@
+@use "/src/styles/partials/_mixins.scss" as *;
+@use "/src/styles/partials/_variables.scss" as *;
+
+.card {
+  &__image {
+    width: 100%;
+  }
+  &__link {
+    display: flex;
+    @include tablet {
+      display: inline-block;
+      width: 50%;
+    }
+    @include desktop {
+      display: flex;
+      width: 30.33%;
+    }
+  }
+
+  &__container {
+    background-color: $color-secondary-background;
+    border: 1px solid $color-secondary-border;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+
+    @include desktop {
+      border-radius: 0.75rem;
+      & .drawer--open {
+        width: 50%;
+        min-width: 25rem;
+      }
+    }
+  }
+  &__photographer {
+    background-color: $color-secondary-background;
+    color: $color-primary-text;
+    position: absolute;
+    border-top-left-radius: 0.625rem;
+    padding: 0.2rem;
+    right: 0;
+    bottom: 3rem;
+    @include font-mobile-label;
+    @include tablet {
+      @include font-tablet-label;
+      bottom: 4rem;
+    }
+  }
+}
+
