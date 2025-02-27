@@ -11,6 +11,10 @@
     }
 
 .hero-card__container {
+  @include tablet {
+    margin-left: .5rem;
+    margin-right: .5rem;
+  }
   @include desktop {
     display: flex;
     flex-direction: column;

@@ -20,8 +20,7 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
 
   async function fetchTags() {
     try {
-      const { data } = await axios.get
-      (`http://localhost:8080/tags`)
+      const { data } = await axios.get(`http://localhost:8080/tags`);
       setTags(data);
     } catch (error) {
       console.error("Error fetching tags:", error);
@@ -29,24 +28,22 @@ function FilterDrawer({ drawerOpen, selectedTag, setSelectedTag }) {
   }
 
   return (
-    <div className={`filter__content ${drawerOpen ? "drawer-open" : ""}`}>
-      <div className={`drawer ${drawerOpen ? "drawer--open" : ""}`}>
-        <h2 className="filter__title">Filters</h2>
-        <ul className="filter__list">
-          {tags.map((tag) => (
-            <li key={tag}>
-              <Tag
-                tag={tag}
-                isClickable={true}
-                drawerOpen={drawerOpen}
-                selectedTag={selectedTag}
-                setSelectedTag={setSelectedTag}
-                onClick={() => handleTagClick(tag)}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className={`drawer ${drawerOpen ? "drawer--open" : ""}`}>
+      <h2 className="filter__title">Filters</h2>
+      <ul className="filter__list">
+        {tags.map((tag) => (
+          <li key={tag}>
+            <Tag
+              tag={tag}
+              isClickable={true}
+              drawerOpen={drawerOpen}
+              selectedTag={selectedTag}
+              setSelectedTag={setSelectedTag}
+              onClick={() => handleTagClick(tag)}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
