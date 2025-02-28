@@ -13,17 +13,7 @@
     }
     @include desktop {
       display: flex;
-      // display: inline-block;
-      // width: 30.33%;
       width: 27rem;
-    //   & .drawer--open {
-    //     width: 0;
-    //   }
-      //   & .filter__drawer--open {
-      //   // @include desktop;
-      //   width: 50%;
-      //   min-width: 25rem;
-      // }
     }
   }
 
@@ -52,7 +42,7 @@
     @include font-mobile-label;
     @include tablet {
       @include font-tablet-label;
-      bottom: 4rem;
+      bottom: 4.5rem;
     }
   }
 }
