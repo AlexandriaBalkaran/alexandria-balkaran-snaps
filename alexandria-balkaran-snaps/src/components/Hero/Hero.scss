@@ -30,6 +30,9 @@
     }
     @include desktop {
       width: 50%;
+      & .drawer--open {
+        width: 100%;
+      }
     }
   }
 }

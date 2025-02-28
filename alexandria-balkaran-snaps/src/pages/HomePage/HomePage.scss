@@ -43,6 +43,15 @@
     @include desktop {
       width: 30%;
       background-color: $color-secondary-background;
+      // & .card__link {
+      //   width: 50%;
+      //   min-width: 25rem;
+      // }
+      // & .filter__drawer--open {
+        // @include desktop;
+        // width: 50%;
+        // min-width: 25rem;
+      // }
     }
   }
 }

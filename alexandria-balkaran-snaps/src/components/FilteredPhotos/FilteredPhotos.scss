@@ -17,7 +17,7 @@
   }
   @include desktop {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     & .drawer--open {
       width: 70%;
     }
