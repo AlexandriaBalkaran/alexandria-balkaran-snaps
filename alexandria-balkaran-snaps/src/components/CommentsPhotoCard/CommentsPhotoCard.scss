@@ -35,6 +35,9 @@
 .photo-section {
   &__text {
     padding: 1rem;
+    @include tablet {
+      padding: 1.5rem;
+    }
   }
   &__likes-date-container {
     display: flex;

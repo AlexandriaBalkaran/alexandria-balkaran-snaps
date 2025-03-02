@@ -16,7 +16,7 @@
   @include tablet {
     padding: 0.5rem 1rem;
     border-radius: 0.75rem;
-    margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+    margin: 1rem 0.5rem 1rem 0.5rem;
     border: 2px solid $color-secondary-border;
     @include font-tablet-label;
   }

@@ -5,10 +5,10 @@
   padding: 3rem 1rem;
   @include tablet {
     padding: 3rem 1.5rem;
-    width: 60%;
   }
   @include desktop {
     padding: 0 1.5rem;
+    width: 60%;
   }
   & p {
     @include font-mobile-body;

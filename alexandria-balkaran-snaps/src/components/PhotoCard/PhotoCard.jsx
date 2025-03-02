@@ -13,9 +13,11 @@ function PhotoCard({ photo }) {
           alt={photo.photoDescription}
         />
         <h4 className="card__photographer">{photo.photographer}</h4>
+        <div className="tag__container">
         {photo.tags.map((tag) => (
           <Tag tag={tag} key={tag} />
         ))}
+        </div>
       </div>
     </Link>
   );
