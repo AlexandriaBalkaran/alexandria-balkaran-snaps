@@ -28,18 +28,18 @@ function CommentsPage() {
 
   async function fetchPhoto() {
     try {
-      const { data } = await axios.get
-      (`http://localhost:8080/photos/${id}`);
+      const { data } = await axios.get(`http://localhost:8080/photos/${id}`);
       setPhoto(data);
     } catch (error) {
       console.error("Error fetching photo:", error);
     }
   }
-  
+
   async function fetchComments() {
     try {
-      const { data } = await axios.get
-      (`http://localhost:8080/photos/${id}/comments`);
+      const { data } = await axios.get(
+        `http://localhost:8080/photos/${id}/comments`
+      );
       setComments(data);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -57,7 +57,11 @@ function CommentsPage() {
         <CommentsPhotoCard photo={photo} formatDate={formatDate} />
       </div>
       <div className="comments-form__container-desktop">
-        <CommentForm commentsURL={(`http://localhost:8080/photos/${id}/comments`)} fetchComments={fetchComments} id={id} />
+        <CommentForm
+          commentsURL={`http://localhost:8080/photos/${id}/comments`}
+          fetchComments={fetchComments}
+          id={id}
+        />
       </div>
       <div className="comments-display__container-desktop">
         <CommentsDisplay comments={comments} />

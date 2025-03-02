@@ -2,18 +2,18 @@
 @use "/src/styles/partials/_variables.scss" as *;
 
 .card__container--width {
-      @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-evenly;
-      }
-    }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
 
 .hero-card__container {
   @include tablet {
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   @include desktop {
     display: flex;
